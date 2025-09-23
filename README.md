@@ -49,9 +49,9 @@ Main PID: 1337 (python3)
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=DD272700&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=0d1117&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
@@ -61,7 +61,7 @@ Main PID: 1337 (python3)
 
 <div align="center">
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=OkeyAmy&layout=donut&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&langs_count=8&size_weight=0.5&count_weight=0.5)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=OkeyAmy&layout=donut&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&langs_count=8&size_weight=0.5&count_weight=0.5)
 
 </div>
 
@@ -92,9 +92,9 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 | | |
 |:---:|:---:|
-| [![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat) | [![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack) |
-| [![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp) | [![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises) |
-| [![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub) | [![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas) |
+| [![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat) | [![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack) |
+| [![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp) | [![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises) |
+| [![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub) | [![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas) |
 
 </div>
 
