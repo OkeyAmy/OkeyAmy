@@ -28,6 +28,35 @@
 
 ---
 
+## 💻 CLI INTERACTION DEMO
+
+```bash
+$ whoami
+okey-amy
+
+$ uname -sr
+Linux 6.10.3-arch1-1
+
+$ gh --version
+gh version 2.52.0
+https://github.com/cli/cli/releases/latest
+
+$ echo "All systems operational." | cowsay
+ ____________________________
+< All systems operational.   >
+ ----------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+$ echo "Boot complete."
+Boot complete.
+```
+
+---
+
 ## 📊 SYSTEM STATUS
 
 ```bash
