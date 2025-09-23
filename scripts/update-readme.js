@@ -337,6 +337,8 @@ async function generateReadme() {
                     AI/ML Engineer | System Architect | Code Alchemist
 \`\`\`
 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+System+Architect;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
+
 </div>
 
 ---
