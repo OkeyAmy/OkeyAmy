@@ -315,18 +315,19 @@ async function generateReadme() {
 
     const readme = `# 🖥️ OKEY-AMY OS | Build ${buildDate}-LTS
 
-\`\`\`bash
+```bash
+$ dmesg | head -n 6
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
 [    0.234891] Initializing GitHub API drivers... [ OK ]
 [    0.445623] Mounting /dev/repositories... scanning...
 [    0.672145] Loading user profile from matrix.local... authenticated
 [    0.891337] Starting system services...
 [    1.042689] All systems operational. Welcome, user.
-\`\`\`
+```
 
 <div align="center">
 
-\`\`\`
+```
      ██████╗ ██╗  ██╗███████╗██╗   ██╗     █████╗ ███╗   ███╗██╗   ██╗
     ██╔═══██╗██║ ██╔╝██╔════╝██╗ ██╔╝     ██╔══██╗████╗ ████║╚██╗ ██╔╝
     ██║   ██║█████╔╝ █████╗  ╚████╔╝█████╗███████║██╔████╔██║ ╚████╔╝ 
@@ -335,7 +336,7 @@ async function generateReadme() {
      ╚═════╝ ╚═╝  ╚═╝╚══════╝  ╚═╝        ╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝   
                                                                        
                     AI/ML Engineer | System Architect | Code Alchemist
-\`\`\`
+```
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+System+Architect;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
 
@@ -345,7 +346,7 @@ async function generateReadme() {
 
 ## 📊 SYSTEM STATUS
 
-\`\`\`bash
+```bash
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
@@ -357,7 +358,7 @@ Main PID: 1337 (python3)
    CGroup: /system.slice/okey-amy.service
 
 ● Status: I vibe with code but verify everything | Architecture first
-\`\`\`
+```
 
 <div align="center">
 
@@ -377,7 +378,7 @@ Main PID: 1337 (python3)
 
 </div>
 
-\`\`\`bash
+```bash
 $ journalctl -f --user-unit=development.service | tail -10
 ${now.toISOString().slice(0, 10)} ${currentTime} matrix systemd[1337]: Starting development session...
 ${now.toISOString().slice(0, 10)} ${(new Date(now.getTime() + 60000)).toISOString().slice(11, 19)} matrix git[1400]: Latest commit synchronized to main branch
@@ -389,7 +390,7 @@ ${now.toISOString().slice(0, 10)} ${(new Date(now.getTime() + 360000)).toISOStri
 ${now.toISOString().slice(0, 10)} ${(new Date(now.getTime() + 420000)).toISOString().slice(11, 19)} matrix nginx[1406]: API response times nominal
 ${now.toISOString().slice(0, 10)} ${(new Date(now.getTime() + 480000)).toISOString().slice(11, 19)} matrix monitoring[1407]: System metrics within parameters
 ${now.toISOString().slice(0, 10)} ${(new Date(now.getTime() + 540000)).toISOString().slice(11, 19)} matrix backup[1408]: Automated backup cycle completed
-\`\`\`
+```
 
 ---
 
@@ -401,7 +402,7 @@ ${now.toISOString().slice(0, 10)} ${(new Date(now.getTime() + 540000)).toISOStri
 
 </div>
 
-\`\`\`bash
+```bash
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -15
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
@@ -414,7 +415,7 @@ ${generateLanguageSection(languages)}
 [█████████████░░░░░░░] fastapi 0.104.1-1   (Async Python APIs)
 [████████████░░░░░░░░] express 4.18.2-1    (Node.js backend)
 [███████████░░░░░░░░░] tailwind 3.3.3-1    (Utility-first CSS)
-\`\`\`
+```
 
 ---
 
@@ -426,10 +427,10 @@ ${generatePinnedSection(featuredRepos)}
 
 </div>
 
-\`\`\`bash
+```bash
 $ find /home/okey/repositories -type d -name ".git" | head -${CONFIG.maxRepos} | while read repo; do
    cd "$(dirname "$repo")"
-   printf "%-40s %s ⭐\\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
+   printf "%-40s %s ⭐\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
@@ -444,35 +445,35 @@ git version 2.42.0
 * Code quality: Automated testing and review workflows active
 * Performance: Sub-100ms response time targets maintained
 * Documentation: Comprehensive inline documentation maintained
-\`\`\`
+```
 
 ---
 
 ## 🛠️ DEVELOPMENT ENVIRONMENT
 
-\`\`\`bash
+```bash
 $ neofetch --ascii_distro arch --config /home/okey/.config/neofetch/github.conf
 
-                  -\`                 okey@development-matrix
-                 .o+\`                -----------------------
-                \`ooo/                OS: Arch Linux x86_64
-               \`+oooo:               Host: Development Environment
-              \`+oooooo:              Kernel: 6.10.3-arch1-1
+                  -`                 okey@development-matrix
+                 .o+`                -----------------------
+                `ooo/                OS: Arch Linux x86_64
+               `+oooo:               Host: Development Environment
+              `+oooooo:              Kernel: 6.10.3-arch1-1
               -+oooooo+:             Uptime: Active development session
-            \`/:-:++oooo+:            Packages: ${userData.public_repos} repos, ${userData.followers} network
-           \`/++++/+++++++:           Shell: zsh 5.9 + oh-my-zsh
-          \`/++++++++++++++:          Resolution: Focus, Precision, Quality
-         \`/+++ooooooooooooo/\`        DE: Terminal + Tmux
-        ./ooosssso++osssssso+\`       WM: i3wm + polybar
-       .oossssso-\`\`\`\`/ossssss+\`      Theme: Tokyo Night Storm
+            `/:-:++oooo+:            Packages: ${userData.public_repos} repos, ${userData.followers} network
+           `/++++/+++++++:           Shell: zsh 5.9 + oh-my-zsh
+          `/++++++++++++++:          Resolution: Focus, Precision, Quality
+         `/+++ooooooooooooo/`        DE: Terminal + Tmux
+        ./ooosssso++osssssso+`       WM: i3wm + polybar
+       .oossssso-````/ossssss+`      Theme: Tokyo Night Storm
       -osssssso.      :ssssssso.     Icons: Nerd Font Complete
      :osssssss/        osssso+++.    Terminal: Alacritty + Starship
     /ossssssss/        +ssssooo/-    Editor: Neovim 0.9.4
-  \`/ossssso+/:-        -:/+osssso+-  CPU: Code Processing Unit
- \`+sso+:-\`                 \`.-/+oso: Memory: Unlimited (curiosity-driven)
-\`++:.                           \`-/+/
-.\`                                 \`/
-\`\`\`
+  `/ossssso+/:-        -:/+osssso+-  CPU: Code Processing Unit
+ `+sso+:-`                 `.-/+oso: Memory: Unlimited (curiosity-driven)
+`++:.                           `-/+/
+.`                                 `/
+```
 
 ---
 
@@ -487,7 +488,7 @@ $ neofetch --ascii_distro arch --config /home/okey/.config/neofetch/github.conf
 
 </div>
 
-\`\`\`bash
+```bash
 $ htop --readonly | head -15
 
 CPU Usage:  [██████████████████████████████████████] 100% (learning)
@@ -500,13 +501,13 @@ ${htopData.processes.map((proc, i) =>
 ).join('\n')}
 
 Load average: 0.${Math.floor(Math.random() * 50 + 30)} 0.${Math.floor(Math.random() * 50 + 25)} 0.${Math.floor(Math.random() * 50 + 20)} | Tasks: ${repos.length} total, ${htopData.activeRepos} active, ${repos.length - htopData.activeRepos} idle
-\`\`\`
+```
 
 ---
 
 ## 🎯 CURRENT OBJECTIVES | ACTIVE PROCESSES
 
-\`\`\`bash
+```bash
 $ ps -aux --forest | grep -E "okey.*[learning|building|coding]"
 
 ${languages.slice(0, 3).map((lang, i) => {
@@ -538,13 +539,13 @@ ${languages.map(lang => {
 [███████████████░░░░░] Distributed systems & microservices design
 [██████████████░░░░░░] Performance optimization & monitoring
 [█████████████░░░░░░░] DevOps automation & infrastructure as code
-\`\`\`
+```
 
 ---
 
 ## 🔗 NETWORK INTERFACES | SYSTEM CONNECTIONS
 
-\`\`\`bash
+```bash
 $ ss -tuln | grep -E "(LISTEN|ESTABLISHED)"
 
 State    Recv-Q Send-Q Local Address:Port  Peer Address:Port Process
@@ -556,7 +557,7 @@ LISTEN   0      128    127.0.0.1:6379           0.0.0.0:*     (redis-server)
 $ curl -s "https://api.github.com/users/${CONFIG.username}" | jq -r '"Connections: " + .login + " | Repos: " + (.public_repos|tostring) + " | Network: " + (.followers|tostring) + " followers"'
 Connections: ${userData.login} | Repos: ${userData.public_repos} | Network: ${userData.followers} followers
 
-\`\`\`
+```
 
 <div align="center">
 
@@ -570,7 +571,7 @@ Connections: ${userData.login} | Repos: ${userData.public_repos} | Network: ${us
 
 ## 🔧 SYSTEM CONFIGURATION
 
-\`\`\`ini
+```bash
 $ cat /home/okey/.config/developer.conf
 
 [philosophy]
@@ -591,13 +592,13 @@ daily_reading = "enabled"
 open_source_contribution = "active"
 tech_community_engagement = "regular"
 skill_development = "project_driven_learning"
-\`\`\`
+```
 
 ---
 
 <div align="center">
 
-\`\`\`
+```
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
 ║    ███████╗██╗  ██╗██╗████████╗    ██████╗ ██████╗ ███╗   ███╗██████╗   ║
@@ -614,7 +615,7 @@ skill_development = "project_driven_learning"
 ║        wireframes before builds, systems thinking in every line."       ║
 ║                                                                          ║
 ╚══════════════════════════════════════════════════════════════════════════╝
-\`\`\`
+```
 
 </div>
 
@@ -622,7 +623,7 @@ skill_development = "project_driven_learning"
 
 <div align="center">
 
-\`\`\`
+```
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                      ⚡ REAL-TIME SYSTEM METRICS ⚡                       ║
 ╠══════════════════════════════════════════════════════════════════════════╣
@@ -631,22 +632,64 @@ skill_development = "project_driven_learning"
 ║ 🕒 Last Update: ${now.toISOString().slice(0, 10)} ${currentTime} UTC | ⏰ Next: 24h        ║
 ║ 🚀 Deploy Status: LIVE | 🔄 Auto-Sync: ENABLED | 🛡️ Security: ACTIVE ║
 ╚══════════════════════════════════════════════════════════════════════════╝
-\`\`\`
+```
 
 *📡 Live data synchronized via GitHub API v4 | 🔄 Auto-updated every 24 hours*
 *🖥️ Powered by GitHub Actions | 🎨 Inspired by ${['Arch Linux', 'Ubuntu', 'Debian', 'Fedora'][Math.floor(Math.random() * 4)]} aesthetics*
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${CONFIG.username}&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/${CONFIG.username}/${CONFIG.username})
 
-\`\`\`bash
+```bash
 $ echo "🚀 Profile powered by dynamic GitHub data | Built with ❤️ and ☕"
 🚀 Profile powered by dynamic GitHub data | Built with ❤️ and ☕
 
 $ uptime
 System operational for ${Math.floor((Date.now() - new Date('2023-01-01').getTime()) / (1000 * 60 * 60 * 24))} days | Load: optimal
-\`\`\`
+```
 
-</div>`;
+</div>
+
+---
+
+## 🧰 CLI AESTHETIC TOOLKIT
+
+```bash
+$ figlet -f slant "Okey Amy"
+   ____        __            ___            __             
+  / __ \/____ / /_____ _    /   |  ____  __/ /_____  ____ _
+ / / / / __ \/ __/ __ `/   / /| | / __ \/ / __/ __ \/ __ `/
+/ /_/ / /_/ / /_/ /_/ /   / ___ |/ / / / / /_/ /_/ / /_/ / 
+\____/ .___/\__/\__,_/   /_/  |_/_/ /_/_/\__/\____/\__,_/  
+    /_/                                                     
+```
+
+```bash
+$ cowsay "I vibe with code but verify everything"
+ _____________________________________________
+/ I vibe with code but verify everything      \
+\____________________________________________/
+        \
+         \\   ^__^
+          \\  (oo)\\_______
+             (__)\\       )\\/\\
+                 ||----w |
+                 ||     ||
+```
+
+```bash
+$ ascii-image-converter https://avatars.githubusercontent.com/${CONFIG.username} -W 48 -C
+# Monochrome avatar rendered as ASCII (truncated)
+@@@@@@@@@@@@@%%%%%%%%%##########********++++++====----::::..
+@@@@@@@@@@@%%%%%%%%#############********++++++====----::::..
+@@@@@@@%%%%%%%%#################********+++++=====----::::..
+@@@@@%%%%%%%%%###############*********++++++====-----::::..
+```
+
+```bash
+$ glow -p README.md
+# Preview README in your terminal with rich TUI rendering
+```
+`;
 
     // Write the updated README
     await fs.writeFile(CONFIG.readmePath, readme, 'utf8');

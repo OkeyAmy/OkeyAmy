@@ -1,6 +1,7 @@
 # 🖥️ OKEY-AMY OS | Build 2025-09-23-LTS
 
 ```bash
+$ dmesg | head -n 6
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
 [    0.234891] Initializing GitHub API drivers... [ OK ]
 [    0.445623] Mounting /dev/repositories... scanning...
@@ -280,7 +281,7 @@ Connections: OkeyAmy | Repos: 94 | Network: 6 followers
 
 ## 🔧 SYSTEM CONFIGURATION
 
-```ini
+```bash
 $ cat /home/okey/.config/developer.conf
 
 [philosophy]
@@ -327,6 +328,47 @@ skill_development = "project_driven_learning"
 ```
 
 </div>
+
+---
+
+## 🧰 CLI AESTHETIC TOOLKIT
+
+```bash
+$ figlet -f slant "Okey Amy"
+   ____        __            ___            __             
+  / __ \\____  / /_____ _    /   |  ____  __/ /_____  ____ _
+ / / / / __ \\/ __/ __ `/   / /| | / __ \\/ / __/ __ \\/ __ `/
+/ /_/ / /_/ / /_/ /_/ /   / ___ |/ / / / / /_/ /_/ / /_/ / 
+\\____/ .___/\\__/\\__,_/   /_/  |_/_/ /_/_/\\__/\\____/\\__,_/  
+    /_/                                                     
+```
+
+```bash
+$ cowsay "I vibe with code but verify everything"
+ _____________________________________________
+/ I vibe with code but verify everything      \
+\\____________________________________________/
+        \\
+         \\   ^__^
+          \\  (oo)\\_______
+             (__)\\       )\\/\\
+                 ||----w |
+                 ||     ||
+```
+
+```bash
+$ ascii-image-converter https://avatars.githubusercontent.com/OkeyAmy -W 48 -C
+# Monochrome avatar rendered as ASCII (truncated)
+@@@@@@@@@@@@@%%%%%%%%%##########********++++++====----::::..
+@@@@@@@@@@@%%%%%%%%#############********++++++====----::::..
+@@@@@@@%%%%%%%%#################********+++++=====----::::..
+@@@@@%%%%%%%%%###############*********++++++====-----::::..
+```
+
+```bash
+$ glow -p README.md
+# Preview README in your terminal with rich TUI rendering
+```
 
 ---
 
