@@ -88,9 +88,15 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 ## 🌐 REPOSITORY INDEX | FEATURED PROJECTS
 
-[![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat)	[![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack)
-[![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp)	[![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises)
-[![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub)	[![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas)
+<div align="center">
+
+| | |
+|:---:|:---:|
+| [![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat) | [![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack) |
+| [![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp) | [![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises) |
+| [![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub) | [![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas) |
+
+</div>
 
 ```bash
 $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
