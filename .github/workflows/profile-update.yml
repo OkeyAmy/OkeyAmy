@@ -63,12 +63,12 @@ jobs:
           git add README.md
           git commit -m "🔄 System Update: $(date '+%Y-%m-%d %H:%M:%S UTC') | Auto-refresh profile data
 
-[AUTOMATED] Repository scan completed
-- Updated live metrics and repository index
-- Refreshed pinned projects and activity logs
-- Synchronized system status indicators
+        [AUTOMATED] Repository scan completed
+        - Updated live metrics and repository index
+        - Refreshed pinned projects and activity logs
+        - Synchronized system status indicators
 
-Build: $(date '+%Y.%m.%d')-LTS | Kernel: Data-Sync-$(date '+%H%M')"
+        Build: $(date '+%Y.%m.%d')-LTS | Kernel: Data-Sync-$(date '+%H%M')"
           git push
           echo "[    1.456789] System manifest updated successfully"
         fi
