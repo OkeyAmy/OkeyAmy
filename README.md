@@ -34,10 +34,10 @@
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since 2025-09-23 15:58:09 WAT; ongoing
+  Active: active (running) since 2025-09-23 16:25:19 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
-   Tasks: 94 (limit: infinity)
+   Tasks: 8 (limit: infinity)
   Memory: 4.2G
    CGroup: /system.slice/okey-amy.service
 
@@ -69,11 +69,11 @@ Main PID: 1337 (python3)
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-[██████░░░░░░░░░░░░░░] python          1.0.0-1        (Active development)
+[██████░░░░░░░░░░░░░░] solidity        1.0.0-1        (Active development)
 [████░░░░░░░░░░░░░░░░] scala           1.0.0-1        (Active development)
 [████░░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
-[██░░░░░░░░░░░░░░░░░░] java            21.0.1-1       (Enterprise applications)
-[█░░░░░░░░░░░░░░░░░░░] solidity        3.11.5-1    (Primary development)
+[███░░░░░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
+[██░░░░░░░░░░░░░░░░░░] javascript      20.8.1-1 (Frontend & APIs)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
 [████████████████░░░░] react 18.2.0-1      (UI components)
@@ -87,7 +87,7 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 ## 🌐 REPOSITORY INDEX | FEATURED PROJECTS
 
-<table><tr><td width="50%">[![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat)</td><td width="50%">[![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack)</td></tr><tr><td width="50%">[![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp)</td><td width="50%">[![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises)</td></tr><tr><td width="50%">[![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub)</td><td width="50%">[![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas)</td></tr></table>
+<table><tr><td width="50%">[![mock-repo-1](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mock-repo-1&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mock-repo-1)</td><td width="50%">[![mock-repo-2](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mock-repo-2&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mock-repo-2)</td></tr><tr><td width="50%">[![mock-repo-3](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mock-repo-3&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mock-repo-3)</td><td width="50%">[![mock-repo-4](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mock-repo-4&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mock-repo-4)</td></tr><tr><td width="50%">[![mock-repo-5](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mock-repo-5&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mock-repo-5)</td><td width="50%">[![mock-repo-6](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mock-repo-6&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mock-repo-6)</td></tr></table>
 
 ```bash
 $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
@@ -96,18 +96,18 @@ $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo;
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
-OkeyAmy                                  2025-09-23 ⭐
-openpoke                                 2025-09-22 ⭐
-docling                                  2025-09-19 ⭐
-eventbuddy                               2025-09-18 ⭐
-Eventbuddy-Sensay                        2025-09-18 ⭐
-comfydeploy                              2025-09-17 ⭐
+mock-repo-1                              2025-09-23 ⭐
+mock-repo-2                              2025-09-22 ⭐
+mock-repo-3                              2025-09-21 ⭐
+mock-repo-4                              2025-09-20 ⭐
+mock-repo-5                              2025-09-19 ⭐
+mock-repo-6                              2025-09-18 ⭐
 
 $ git --version && git log --oneline --graph --all -5 2>/dev/null
 git version 2.42.0
-* Latest development commits (live data from 94 repositories)
+* Latest development commits (live data from 8 repositories)
 * Real commit history synchronized from: github.com/OkeyAmy
-* Contribution frequency: 26 repositories updated this month
+* Contribution frequency: 8 repositories updated this month
 ```
 
 ---
@@ -129,7 +129,7 @@ git version 2.42.0
 ![Profile Views](https://komarev.com/ghpvc/?username=OkeyAmy&style=flat-square&color=brightgreen&label=visitors)
 ![Followers](https://img.shields.io/github/followers/OkeyAmy?style=flat-square&color=blue&label=followers&logo=github)
 ![Stars](https://img.shields.io/github/stars/OkeyAmy?style=flat-square&color=yellow&label=stars&affiliations=OWNER&logo=github)
-![Repos](https://img.shields.io/badge/repos-94-green?style=flat-square)
+![Repos](https://img.shields.io/badge/repos-8-green?style=flat-square)
 
 </div>
 
@@ -145,5 +145,8 @@ git version 2.42.0
 
 **Challenge me at tic-tac-toe** | **Discuss quantum algorithms** | **Share AI/ML insights**
 
+---
+
+*Last updated: 2025-09-23 | Auto-sync: 24h | Built with GitHub Actions*
 
 </div>

@@ -370,7 +370,9 @@ function generateReadmeContent(data) {
   const buildDate = now.toISOString().split('T')[0];
   const currentTime = now.toISOString().slice(11, 19);
 
-  const featuredRepos = pinnedRepos || repos.slice(0, 6);
+  const featuredRepos = (Array.isArray(pinnedRepos) && pinnedRepos.length > 0)
+    ? pinnedRepos
+    : repos.slice(0, 6);
   
   // Generate dynamic system data
   const systemMetrics = generateSystemMetrics(userData, repos, languages);
