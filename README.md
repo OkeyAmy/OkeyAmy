@@ -69,11 +69,12 @@ Main PID: 1337 (python3)
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-[██████░░░░░░░░░░░░░░] python          1.0.0-1        (Active development)
+[██████████████████░░] python          1.0.0-1        (Primary focus - Active development)
+[███████████████░░░░░] typescript      5.2.2-1        (Major focus - Type-safe development)
+[██████████████░░░░░░] javascript      ES2023-1       (Major focus - Dynamic scripting)
 [████░░░░░░░░░░░░░░░░] scala           1.0.0-1        (Active development)
-[████░░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
 [██░░░░░░░░░░░░░░░░░░] java            21.0.1-1       (Enterprise applications)
-[█░░░░░░░░░░░░░░░░░░░] solidity        3.11.5-1    (Primary development)
+[█░░░░░░░░░░░░░░░░░░░] solidity        3.11.5-1       (Blockchain development)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
 [████████████████░░░░] react 18.2.0-1      (UI components)
@@ -87,7 +88,15 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 ## 🌐 REPOSITORY INDEX | FEATURED PROJECTS
 
-<table><tr><td width="50%">[![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat)</td><td width="50%">[![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack)</td></tr><tr><td width="50%">[![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp)</td><td width="50%">[![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises)</td></tr><tr><td width="50%">[![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub)</td><td width="50%">[![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas)</td></tr></table>
+<div align="center">
+
+| | |
+|:---:|:---:|
+| [![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Axioschat) | [![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/ddos-attack) |
+| [![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/mantle-mcp) | [![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/Solidity-Exercises) |
+| [![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/QuestHub) | [![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/RePlas) |
+
+</div>
 
 ```bash
 $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
