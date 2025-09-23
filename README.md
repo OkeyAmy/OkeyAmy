@@ -22,6 +22,8 @@
                     AI/ML Engineer | System Architect | Code Alchemist
 ```
 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+System+Architect;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
+
 </div>
 
 ---
@@ -218,15 +220,15 @@ Load average: 0.68 0.40 0.35 | Tasks: 94 total, 6 active, 88 idle
 ```bash
 $ ps -aux --forest | grep -E "okey.*[learning|building|coding]"
 
-okey  1337  █ /usr/bin/solidity --version
+ohey  1337  █ /usr/bin/solidity --version
   └─ okey  1338  └─ solidity build --release
       └─ okey  1339  └─ solidity test --verbose
 
-okey  1340  █ /usr/bin/scala --version
+ohey  1340  █ /usr/bin/scala --version
   └─ okey  1341  └─ scala build --release
       └─ okey  1342  └─ scala test --verbose
 
-okey  1343  █ /usr/bin/tsc --build --watch
+ohey  1343  █ /usr/bin/tsc --build --watch
   └─ okey  1344  └─ npm run lint:fix --silent
       └─ okey  1345  └─ jest --coverage --watchAll=false
 
