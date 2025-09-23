@@ -69,11 +69,12 @@ Main PID: 1337 (python3)
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-[██████░░░░░░░░░░░░░░] python          1.0.0-1        (Active development)
+[██████████████████░░] python          1.0.0-1        (Primary focus - Active development)
+[███████████████░░░░░] typescript      5.2.2-1        (Major focus - Type-safe development)
+[██████████████░░░░░░] javascript      ES2023-1       (Major focus - Dynamic scripting)
 [████░░░░░░░░░░░░░░░░] scala           1.0.0-1        (Active development)
-[████░░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
 [██░░░░░░░░░░░░░░░░░░] java            21.0.1-1       (Enterprise applications)
-[█░░░░░░░░░░░░░░░░░░░] solidity        3.11.5-1    (Primary development)
+[█░░░░░░░░░░░░░░░░░░░] solidity        3.11.5-1       (Blockchain development)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
 [████████████████░░░░] react 18.2.0-1      (UI components)
