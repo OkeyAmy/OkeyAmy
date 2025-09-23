@@ -69,11 +69,11 @@ Main PID: 1337 (python3)
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-[██████░░░░░░░░░░░░░░] solidity        1.0.0-1        (Active development)
+[██████░░░░░░░░░░░░░░] python          1.0.0-1        (Active development)
 [████░░░░░░░░░░░░░░░░] scala           1.0.0-1        (Active development)
 [████░░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
 [██░░░░░░░░░░░░░░░░░░] java            21.0.1-1       (Enterprise applications)
-[█░░░░░░░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
+[█░░░░░░░░░░░░░░░░░░░] solidity        3.11.5-1    (Primary development)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
 [████████████████░░░░] react 18.2.0-1      (UI components)
@@ -145,8 +145,5 @@ git version 2.42.0
 
 **Challenge me at tic-tac-toe** | **Discuss quantum algorithms** | **Share AI/ML insights**
 
----
-
-*Last updated: 2025-09-23 | Auto-sync: 24h | Built with GitHub Actions*
 
 </div>
