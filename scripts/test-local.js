@@ -67,3 +67,4 @@ function checkSecurity() {
 console.log('⚡ Starting system tests...');
 checkSecurity();
 runTests();
+

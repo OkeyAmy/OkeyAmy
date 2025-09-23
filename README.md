@@ -19,10 +19,10 @@
     ╚██████╔╝██║  ██╗███████╗  ██║        ██║  ██║██║ ╚═╝ ██║   ██║   
      ╚═════╝ ╚═╝  ╚═╝╚══════╝  ╚═╝        ╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝   
                                                                        
-                    AI/ML Engineer | System Architect | Code Alchemist
+                    AI/ML Engineer | Rapid Prototyper | Code Alchemist
 ```
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+System+Architect;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
 
 </div>
 
@@ -34,14 +34,17 @@
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since 2025-09-23 14:37:18 WAT; ongoing
+  Active: active (running) since 2025-09-23 15:56:43 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
-   Tasks: 94 (limit: infinity)
+   Tasks: 8 (limit: infinity)
   Memory: 4.2G
    CGroup: /system.slice/okey-amy.service
 
 ● Status: I vibe with code but verify everything | Architecture first
+● Focus: Rapid prototyping ideas → software | AI agents + clean code
+● Learning: Rust & Solidity fundamentals | Quantum computing research
+● Interests: Anime, tic-tac-toe challenges, Linux aesthetics, formulas > spelling
 ```
 
 <div align="center">
@@ -54,31 +57,7 @@ Main PID: 1337 (python3)
 
 ---
 
-## 🔥 LIVE ACTIVITY MONITOR
-
-<div align="center">
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=OkeyAmy&theme=github-dark&hide_border=true&bg_color=0d1117&color=00ff00&line=ff6b35&point=c9d1d9&area=true&area_color=00ff00)
-
-</div>
-
-```bash
-$ journalctl -f --user-unit=development.service | tail -10
-2025-09-23 14:37:18 matrix systemd[1337]: Starting development session...
-2025-09-23 14:38:18 matrix git[1400]: Latest commit synchronized to main branch
-2025-09-23 14:39:18 matrix npm[1401]: Build completed successfully
-2025-09-23 14:40:18 matrix docker[1402]: Container services healthy
-2025-09-23 14:41:18 matrix pytest[1403]: All tests passed ✓ (coverage maintained)
-2025-09-23 14:42:18 matrix kubernetes[1404]: Services scaled and optimized
-2025-09-23 14:43:18 matrix redis[1405]: Cache performance optimal
-2025-09-23 14:44:18 matrix nginx[1406]: API response times nominal
-2025-09-23 14:45:18 matrix monitoring[1407]: System metrics within parameters
-2025-09-23 14:46:18 matrix backup[1408]: Automated backup cycle completed
-```
-
----
-
-## 📦 PACKAGE MANAGER | TECH STACK
+## 📦 TECH STACK | PACKAGE MANAGER
 
 <div align="center">
 
@@ -87,14 +66,14 @@ $ journalctl -f --user-unit=development.service | tail -10
 </div>
 
 ```bash
-$ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -15
+$ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
 [██████░░░░░░░░░░░░░░] solidity        1.0.0-1        (Active development)
 [████░░░░░░░░░░░░░░░░] scala           1.0.0-1        (Active development)
 [████░░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
-[██░░░░░░░░░░░░░░░░░░] java            21.0.1-1       (Enterprise applications)
-[█░░░░░░░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
+[███░░░░░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
+[██░░░░░░░░░░░░░░░░░░] javascript      20.8.1-1 (Frontend & APIs)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
 [████████████████░░░░] react 18.2.0-1      (UI components)
@@ -102,171 +81,61 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -15
 [██████████████░░░░░░] django 4.2.7-1      (Python web framework)
 [█████████████░░░░░░░] fastapi 0.104.1-1   (Async Python APIs)
 [████████████░░░░░░░░] express 4.18.2-1    (Node.js backend)
-[███████████░░░░░░░░░] tailwind 3.3.3-1    (Utility-first CSS)
 ```
 
 ---
 
 ## 🌐 REPOSITORY INDEX | FEATURED PROJECTS
 
-<div align="center">
 
-![Axioschat](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Axioschat&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)
-
-![ddos-attack](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=ddos-attack&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)
-
-![mantle-mcp](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=mantle-mcp&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)
-
-![Solidity-Exercises](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Solidity-Exercises&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)
-
-![QuestHub](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=QuestHub&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)
-
-![RePlas](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=RePlas&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)
-
-</div>
 
 ```bash
-$ find /home/okey/repositories -type d -name ".git" | head -8 | while read repo; do
+$ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
    cd "$(dirname "$repo")"
    printf "%-40s %s ⭐\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
-OkeyAmy                                  2025-09-23 ⭐
-openpoke                                 2025-09-22 ⭐
-docling                                  2025-09-19 ⭐
-eventbuddy                               2025-09-18 ⭐
-Eventbuddy-Sensay                        2025-09-18 ⭐
-comfydeploy                              2025-09-17 ⭐
-api-chat-tutorial                        2025-05-15 ⭐
-communitynotes                           2025-09-09 ⭐
+mock-repo-1                              2025-09-23 ⭐
+mock-repo-2                              2025-09-22 ⭐
+mock-repo-3                              2025-09-21 ⭐
+mock-repo-4                              2025-09-20 ⭐
+mock-repo-5                              2025-09-19 ⭐
+mock-repo-6                              2025-09-18 ⭐
 
-$ git --version && git log --oneline --graph --all -8 2>/dev/null || echo "Repository scan in progress..."
+$ git --version && git log --oneline --graph --all -5 2>/dev/null
 git version 2.42.0
-* Latest development commits (live data from 94 repositories):
+* Latest development commits (live data from 8 repositories)
 * Real commit history synchronized from: github.com/OkeyAmy
-* Contribution graph updates: Real-time via GitHub API
-* Commit frequency: 26 repositories updated this month
-* Code quality: Automated testing and review workflows active
-* Performance: Sub-100ms response time targets maintained
-* Documentation: Comprehensive inline documentation maintained
+* Contribution frequency: 8 repositories updated this month
 ```
 
 ---
 
-## 🛠️ DEVELOPMENT ENVIRONMENT
-
-```bash
-$ neofetch --ascii_distro arch --config /home/okey/.config/neofetch/github.conf
-
-                  -`                 okey@development-matrix
-                 .o+`                -----------------------
-                `ooo/                OS: Arch Linux x86_64
-               `+oooo:               Host: Development Environment
-              `+oooooo:              Kernel: 6.10.3-arch1-1
-              -+oooooo+:             Uptime: Active development session
-            `/:-:++oooo+:            Packages: 94 repos, 6 network
-           `/++++/+++++++:           Shell: zsh 5.9 + oh-my-zsh
-          `/++++++++++++++:          Resolution: Focus, Precision, Quality
-         `/+++ooooooooooooo/`        DE: Terminal + Tmux
-        ./ooosssso++osssssso+`       WM: i3wm + polybar
-       .oossssso-````/ossssss+`      Theme: Tokyo Night Storm
-      -osssssso.      :ssssssso.     Icons: Nerd Font Complete
-     :osssssss/        osssso+++.    Terminal: Alacritty + Starship
-    /ossssssss/        +ssssooo/-    Editor: Neovim 0.9.4
-  `/ossssso+/:-        -:/+osssso+-  CPU: Code Processing Unit
- `+sso+:-`                 `.-/+oso: Memory: Unlimited (curiosity-driven)
-`++:.                           `-/+/
-.`                                 `/
-```
-
----
-
-## 📈 LIVE METRICS | SYSTEM MONITORING
+## 🔥 LIVE ACTIVITY
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=OkeyAmy&style=flat-square&color=brightgreen&label=system.users.active)
-![Followers](https://img.shields.io/github/followers/OkeyAmy?style=flat-square&color=blue&label=network.connections&logo=github)
-![Stars](https://img.shields.io/github/stars/OkeyAmy?style=flat-square&color=yellow&label=project.stars&affiliations=OWNER&logo=github)
-![Code Quality](https://img.shields.io/badge/code_quality-90.7%25-brightgreen?style=flat-square&label=system.performance)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=OkeyAmy&theme=github-dark&hide_border=true&bg_color=0d1117&color=00ff00&line=ff6b35&point=c9d1d9&area=true&area_color=00ff00)
 
 </div>
 
-```bash
-$ htop --readonly | head -15
+---
 
-CPU Usage:  [██████████████████████████████████████] 100% (learning)
-Memory:     [[██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░]] 35% (3.2G / 9G)
-Network I/O: ↓ 295.2 MB/s (repositories) ↑ 14.7 MB/s (contributions)
+## Metrics
 
-PID    USER    PR  NI    VIRT    RES    SHR  S  %CPU %MEM     TIME+ COMMAND
-1337   okey    20   0  2150M   516M   129M  R   98.7  4.3   246:98 python3
-1338   okey    20   0  1050M   252M   63M  S   45.2  2.1   113:45 node
-1339   okey    20   0  550M   132M   33M  S   23.1  1.1   57:23 go
-1340   okey    20   0  400M   96M   24M  S   12.4  0.8   31:12 docker
-1341   okey    20   0  250M   60M   15M  S   8.7  0.5   21:08 git
-1342   okey    20   0  150M   36M   9M  S   5.3  0.3   13:05 npm
-1343   okey    20   0  100M   24M   6M  S   3.2  0.2   8:03 pytest
-1344   okey    20   0  50M   12M   3M  S   2.1  0.1   5:02 redis-cli
+<div align="center">
 
-Load average: 0.59 0.38 0.53 | Tasks: 94 total, 6 active, 88 idle
-```
+![Profile Views](https://komarev.com/ghpvc/?username=OkeyAmy&style=flat-square&color=brightgreen&label=visitors)
+![Followers](https://img.shields.io/github/followers/OkeyAmy?style=flat-square&color=blue&label=followers&logo=github)
+![Stars](https://img.shields.io/github/stars/OkeyAmy?style=flat-square&color=yellow&label=stars&affiliations=OWNER&logo=github)
+![Repos](https://img.shields.io/badge/repos-8-green?style=flat-square)
+
+</div>
 
 ---
 
-## 🎯 CURRENT OBJECTIVES | ACTIVE PROCESSES
-
-```bash
-$ ps -aux --forest | grep -E "okey.*[learning|building|coding]"
-
-okey  1337  █ /usr/bin/solidity --version
-  └─ okey  1338  └─ solidity build --release
-      └─ okey  1339  └─ solidity test --verbose
-
-okey  1340  █ /usr/bin/scala --version
-  └─ okey  1341  └─ scala build --release
-      └─ okey  1342  └─ scala test --verbose
-
-okey  1343  █ /usr/bin/tsc --build --watch
-  └─ okey  1344  └─ npm run lint:fix --silent
-      └─ okey  1345  └─ jest --coverage --watchAll=false
-
-# DEVELOPMENT STACK (real-time analysis)
-[██████░░░░░░░░░░░░░░] Solidity 32.0% (primary)
-[████░░░░░░░░░░░░░░░░] Scala 21.4% (active)
-[████░░░░░░░░░░░░░░░░] TypeScript 20.5% (active)
-[██░░░░░░░░░░░░░░░░░░] Java 10.7% (active)
-[█░░░░░░░░░░░░░░░░░░░] Python 4.4% (utility)
-[█░░░░░░░░░░░░░░░░░░░] JavaScript 3.7% (utility)
-[░░░░░░░░░░░░░░░░░░░░] C 2.3% (utility)
-[░░░░░░░░░░░░░░░░░░░░] Starlark 1.8% (utility)
-
-# LEARNING QUEUE (priority-ordered by project activity)
-[████████████████████] Solidity system architecture optimization
-[████████████████░░░░] Cloud-native Scala applications  
-[███████████████░░░░░] Distributed systems & microservices design
-[██████████████░░░░░░] Performance optimization & monitoring
-[█████████████░░░░░░░] DevOps automation & infrastructure as code
-```
-
----
-
-## 🔗 NETWORK INTERFACES | SYSTEM CONNECTIONS
-
-```bash
-$ ss -tuln | grep -E "(LISTEN|ESTABLISHED)"
-
-State    Recv-Q Send-Q Local Address:Port  Peer Address:Port Process
-LISTEN   0      128    127.0.0.1:8080           0.0.0.0:*     (development-api)
-LISTEN   0      128    127.0.0.1:3000           0.0.0.0:*     (react-dev-server)
-LISTEN   0      128    127.0.0.1:5432           0.0.0.0:*     (postgresql)
-LISTEN   0      128    127.0.0.1:6379           0.0.0.0:*     (redis-server)
-
-$ curl -s "https://api.github.com/users/OkeyAmy" | jq -r '"Connections: " + .login + " | Repos: " + (.public_repos|tostring) + " | Network: " + (.followers|tostring) + " followers"'
-Connections: OkeyAmy | Repos: 94 | Network: 6 followers
-
-```
+## Connect
 
 <div align="center">
 
@@ -274,86 +143,10 @@ Connections: OkeyAmy | Repos: 94 | Network: 6 followers
 [![Email](https://img.shields.io/badge/Email-amaobiokeoma%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117)](mailto:amaobiokeoma@gmail.com)
 [![Twitter](https://img.shields.io/badge/Twitter-okey__amy-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=0d1117)](https://twitter.com/okey_amy)
 
-</div>
+**Challenge me at tic-tac-toe** | **Discuss quantum algorithms** | **Share AI/ML insights**
 
 ---
 
-## 🔧 SYSTEM CONFIGURATION
-
-```ini
-$ cat /home/okey/.config/developer.conf
-
-[philosophy]
-code_quality = "non_negotiable"  
-performance = "high_priority"
-testing = "integral_to_development"  
-documentation = "comprehensive_inline"
-architecture = "design_first_implement_second"
-
-[workflow]
-version_control = "git + conventional_commits"
-testing_strategy = "tdd_with_90_percent_coverage"  
-deployment = "ci_cd_automated_docker_k8s"
-monitoring = "prometheus_grafana_elk_stack"
-
-[continuous_learning]
-daily_reading = "enabled"
-open_source_contribution = "active"
-tech_community_engagement = "regular"
-skill_development = "project_driven_learning"
-```
-
----
-
-<div align="center">
-
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                                                                          ║
-║    ███████╗██╗  ██╗██╗████████╗    ██████╗ ██████╗ ███╗   ███╗██████╗   ║
-║    ██╔════╝╚██╗██╔╝██║╚══██╔══╝██╗██╗██╔════╝██╔═══██╗████╗ ████║██╔══██╗║
-║    █████╗   ╚███╔╝ ██║   ██║   ╚███╔╝ ██║     ██║   ██║██╔████╔██║██████╔╝║
-║    ██╔══╝   ██╔██╗ ██║   ██║   ██╔██╗ ██║     ██║   ██║██║╚██╔╝██║██╔═══╝ ║
-║    ███████╗██╔╝ ██╗██║   ██║  ██╔╝ ██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║██║     ║
-║    ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝  ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ║
-║                                                                          ║
-║                 Powered by curiosity, caffeine & clean code             ║
-║              Build: 2025-09-23-LTS | Kernel: Code-Verify-Build          ║
-║                                                                          ║
-║       "I vibe with code but verify everything. Architecture first,      ║
-║        wireframes before builds, systems thinking in every line."       ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
-
-</div>
-
----
-
-<div align="center">
-
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                      ⚡ REAL-TIME SYSTEM METRICS ⚡                       ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║ 📊 Repositories: 94 active | ⭐ Total Stars: 7 | 🔗 Network: 13   ║
-║ 💻 Primary Lang: Solidity (32.0%) | 📈 Quality Score: 90.7%      ║
-║ 🕒 Last Update: 2025-09-23 14:37:18 UTC | ⏰ Next: 24h        ║
-║ 🚀 Deploy Status: LIVE | 🔄 Auto-Sync: ENABLED | 🛡️ Security: ACTIVE ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
-
-*📡 Live data synchronized via GitHub API v4 | 🔄 Auto-updated every 24 hours*
-*🖥️ Powered by GitHub Actions | 🎨 Inspired by Fedora aesthetics*
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/OkeyAmy/OkeyAmy)
-
-```bash
-$ echo "🚀 Profile powered by dynamic GitHub data | Built with ❤️ and ☕"
-🚀 Profile powered by dynamic GitHub data | Built with ❤️ and ☕
-
-$ uptime
-System operational for 996 days | Load: optimal
-```
+*Last updated: 2025-09-23 | Auto-sync: 24h | Built with GitHub Actions*
 
 </div>
