@@ -1,0 +1,30 @@
+{
+  "name": "okey-amy-profile",
+  "version": "2024.09.23",
+  "description": "🖥️ OKEY-AMY OS | Distro-Terminal GitHub Profile with Dynamic Data",
+  "main": "scripts/update-readme.js",
+  "scripts": {
+    "update": "node scripts/update-readme.js",
+    "test": "node scripts/test-local.js",
+    "build": "echo 'Building distro-terminal profile...' && npm run update"
+  },
+  "keywords": [
+    "github-profile",
+    "readme",
+    "automation",
+    "distro-terminal",
+    "linux-aesthetic"
+  ],
+  "author": "OkeyAmy <amaobiokeoma@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

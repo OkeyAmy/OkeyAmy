@@ -1,0 +1,84 @@
+name: 🔄 Profile Data Update | System Maintenance
+
+on:
+  schedule:
+    # Run every 24 hours at 00:00 UTC (distro-style cron)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allow manual triggering for testing
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/profile-update.yml'
+      - 'scripts/update-readme.js'
+
+jobs:
+  update-profile:
+    name: 📡 Scanning repositories & updating system manifest
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+      
+    steps:
+    - name: 🔧 [INIT] Mounting repository filesystem
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: 🐧 [SETUP] Installing Node.js runtime environment  
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: 📦 [DEPS] Loading system packages
+      run: |
+        echo "[    0.234891] Installing dependencies..."
+        npm install --production --legacy-peer-deps
+        echo "[    0.445623] Package installation complete"
+
+    - name: 🔍 [SCAN] Fetching live GitHub API data
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_USERNAME: ${{ github.repository_owner }}
+      run: |
+        echo "[    0.672145] Authenticating with GitHub API..."
+        echo "[    0.891337] Scanning repositories and metrics..."
+        node scripts/update-readme.js
+        echo "[    1.042689] Data collection complete"
+
+    - name: 📝 [UPDATE] Committing system manifest changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "🤖 System Update Bot"
+        
+        if git diff --quiet README.md; then
+          echo "[    1.234567] No changes detected - system up to date"
+        else
+          echo "[    1.234567] Committing updated system manifest..."
+          git add README.md
+          git commit -m "🔄 System Update: $(date '+%Y-%m-%d %H:%M:%S UTC') | Auto-refresh profile data
+
+[AUTOMATED] Repository scan completed
+- Updated live metrics and repository index
+- Refreshed pinned projects and activity logs
+- Synchronized system status indicators
+
+Build: $(date '+%Y.%m.%d')-LTS | Kernel: Data-Sync-$(date '+%H%M')"
+          git push
+          echo "[    1.456789] System manifest updated successfully"
+        fi
+
+    - name: 📊 [LOG] System update summary
+      run: |
+        echo "╔══════════════════════════════════════════════════════════════════════════╗"
+        echo "║                     PROFILE UPDATE COMPLETED                            ║"
+        echo "╠══════════════════════════════════════════════════════════════════════════╣"
+        echo "║ Timestamp: $(date '+%Y-%m-%d %H:%M:%S UTC')                                    ║"
+        echo "║ Status: Profile data synchronized with GitHub API                       ║"
+        echo "║ Next sync: Scheduled in 24 hours                                        ║"
+        echo "╚══════════════════════════════════════════════════════════════════════════╝"
