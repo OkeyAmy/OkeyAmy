@@ -427,7 +427,7 @@ Main PID: 1337 (python3)
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${CONFIG.username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${CONFIG.username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true)
 
 ![GitHub Streak](https://github-readme-streak-stats-salesp07.vercel.app/?user=${CONFIG.username}&theme=dark&hide_border=true&background=0d1117&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
@@ -439,7 +439,7 @@ Main PID: 1337 (python3)
 
 <div align="center">
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${CONFIG.username}&layout=donut&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&langs_count=8&size_weight=0.5&count_weight=0.5)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${CONFIG.username}&layout=donut&theme=dark&hide_border=true&bg_color=0d1117&title_color=00ff00&text_color=c9d1d9&langs_count=8&size_weight=0.5&count_weight=0.5)
 
 </div>
 
