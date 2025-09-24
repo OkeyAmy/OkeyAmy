@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2025-09-23-LTS
+# 🖥️ OKEY-AMY OS | Build 2025-09-24-LTS
 
 ```bash
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
@@ -22,7 +22,7 @@
                     AI/ML Engineer | Rapid Prototyper | Code Alchemist
 ```
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core)](https://git.io/typing-svg)
 
 </div>
 
@@ -34,7 +34,7 @@
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since 2025-09-23 15:56:43 WAT; ongoing
+  Active: active (running) since 2025-09-24 10:12:22 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
    Tasks: 8 (limit: infinity)
@@ -51,7 +51,7 @@ Main PID: 1337 (python3)
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=DD272700&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=0d1117&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
@@ -69,17 +69,17 @@ Main PID: 1337 (python3)
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-[██████░░░░░░░░░░░░░░] solidity        1.0.0-1        (Active development)
-[████░░░░░░░░░░░░░░░░] scala           1.0.0-1        (Active development)
-[████░░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
-[███░░░░░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
-[██░░░░░░░░░░░░░░░░░░] javascript      20.8.1-1 (Frontend & APIs)
+[███████░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
+[█████░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
+[████░░░░░░░░░░░░░░░░] javascript      20.8.1-1 (Frontend & APIs)
+[██░░░░░░░░░░░░░░░░░░] rust            1.72.0-1      (Learning & exploring)
+[█░░░░░░░░░░░░░░░░░░░] html            5.3.0-1        (Web markup)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
-[████████████████░░░░] react 18.2.0-1      (UI components)
+[████████████████░░░░] django 4.2.7-1      (Python web framework)
+[████████████████░░░░] fastapi 0.104.1-1   (Async Python APIs)
+[███████████████░░░░░] react 18.2.0-1      (UI components)
 [███████████████░░░░░] nextjs 14.0.1-1     (Full-stack React)
-[██████████████░░░░░░] django 4.2.7-1      (Python web framework)
-[█████████████░░░░░░░] fastapi 0.104.1-1   (Async Python APIs)
 [████████████░░░░░░░░] express 4.18.2-1    (Node.js backend)
 ```
 
@@ -96,12 +96,12 @@ $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo;
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
-mock-repo-1                              2025-09-23 ⭐
-mock-repo-2                              2025-09-22 ⭐
-mock-repo-3                              2025-09-21 ⭐
-mock-repo-4                              2025-09-20 ⭐
-mock-repo-5                              2025-09-19 ⭐
-mock-repo-6                              2025-09-18 ⭐
+mock-repo-1                              2025-09-24 ⭐
+mock-repo-2                              2025-09-23 ⭐
+mock-repo-3                              2025-09-22 ⭐
+mock-repo-4                              2025-09-21 ⭐
+mock-repo-5                              2025-09-20 ⭐
+mock-repo-6                              2025-09-19 ⭐
 
 $ git --version && git log --oneline --graph --all -5 2>/dev/null
 git version 2.42.0
@@ -147,6 +147,6 @@ git version 2.42.0
 
 ---
 
-*Last updated: 2025-09-23 | Auto-sync: 24h | Built with GitHub Actions*
+*Last updated: 2025-09-24*
 
 </div>

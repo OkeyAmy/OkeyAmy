@@ -251,17 +251,18 @@ function generateLanguageSection(languages) {
 function getLanguageVersion(language) {
   const versions = {
     'Python': '3.11.5-1    (Primary development)',
-    'JavaScript': '20.8.1-1 (Frontend & APIs)',
     'TypeScript': '5.2.2-1  (Type-safe development)',
+    'JavaScript': '20.8.1-1 (Frontend & APIs)',
+    'Rust': '1.72.0-1      (Learning & exploring)',
     'HTML': '5.3.0-1        (Web markup)',
     'CSS': '4.0.1-1         (Styling & layouts)',
     'Java': '21.0.1-1       (Enterprise applications)',
     'SQL': '15.4.0-1        (Database queries)',
     'Shell': '5.2.15-1       (System automation)',
     'Go': '1.21.0-1       (System programming)',
-    'Rust': '1.72.0-1      (Performance critical)',
     'C++': '23.0.0-1       (Low-level optimization)',
-    'PHP': '8.2.0-1        (Web development)'
+    'PHP': '8.2.0-1        (Web development)',
+    'Solidity': '0.8.19-1   (Smart contracts)'
   };
   return versions[language] || '1.0.0-1        (Active development)';
 }
@@ -278,21 +279,22 @@ function generatePinnedSection(pinnedRepos) {
     return `[![${repo.name}](https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo.name}&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/${CONFIG.username}/${repo.name})`;
   });
 
-  // Create 2-column layout using HTML table
-  let grid = '<table><tr>';
-  for (let i = 0; i < repoCards.length; i++) {
-    if (i > 0 && i % 2 === 0) {
-      grid += '</tr><tr>';
+  // Create proper 2-column markdown layout
+  let grid = '<div align="center">\n\n';
+  grid += '<table>\n';
+  
+  for (let i = 0; i < repoCards.length; i += 2) {
+    grid += '<tr>\n';
+    grid += `<td width="50%">\n\n${repoCards[i]}\n\n</td>\n`;
+    if (i + 1 < repoCards.length) {
+      grid += `<td width="50%">\n\n${repoCards[i + 1]}\n\n</td>\n`;
+    } else {
+      grid += '<td width="50%"></td>\n';
     }
-    grid += `<td width="50%">${repoCards[i]}</td>`;
+    grid += '</tr>\n';
   }
   
-  // Fill empty cell if odd number of repos
-  if (repoCards.length % 2 !== 0) {
-    grid += '<td width="50%"></td>';
-  }
-  
-  grid += '</tr></table>';
+  grid += '</table>\n\n</div>';
   return grid;
 }
 
@@ -319,11 +321,11 @@ async function generateReadme() {
         pushed_at: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString()
       })),
       languages: [
-        { name: 'Solidity', percentage: '32.0' },
-        { name: 'Scala', percentage: '21.4' },
-        { name: 'TypeScript', percentage: '20.5' },
-        { name: 'Python', percentage: '15.3' },
-        { name: 'JavaScript', percentage: '10.8' }
+        { name: 'Python', percentage: '35.0' },
+        { name: 'TypeScript', percentage: '25.4' },
+        { name: 'JavaScript', percentage: '20.5' },
+        { name: 'Rust', percentage: '12.3' },
+        { name: 'HTML', percentage: '6.8' }
       ],
       pinnedRepos: []
     };
@@ -400,7 +402,7 @@ function generateReadmeContent(data) {
                     AI/ML Engineer | Rapid Prototyper | Code Alchemist
 \`\`\`
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Code+Alchemist+%7C+Terminal-first+Design;Arch+Linux+aesthetics+%7C+Clean+Code+Energy)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core)](https://git.io/typing-svg)
 
 </div>
 
@@ -429,7 +431,7 @@ Main PID: 1337 (python3)
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${CONFIG.username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=${CONFIG.username}&theme=dark&hide_border=true&background=DD272700&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=${CONFIG.username}&theme=dark&hide_border=true&background=0d1117&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
@@ -450,10 +452,10 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 ${generateLanguageSection(languages)}
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
-[████████████████░░░░] react 18.2.0-1      (UI components)
+[████████████████░░░░] django 4.2.7-1      (Python web framework)
+[████████████████░░░░] fastapi 0.104.1-1   (Async Python APIs)
+[███████████████░░░░░] react 18.2.0-1      (UI components)
 [███████████████░░░░░] nextjs 14.0.1-1     (Full-stack React)
-[██████████████░░░░░░] django 4.2.7-1      (Python web framework)
-[█████████████░░░░░░░] fastapi 0.104.1-1   (Async Python APIs)
 [████████████░░░░░░░░] express 4.18.2-1    (Node.js backend)
 \`\`\`
 
@@ -516,7 +518,7 @@ git version 2.42.0
 
 ---
 
-*Last updated: ${buildDate} | Auto-sync: 24h | Built with GitHub Actions*
+*Last updated: ${buildDate}*
 
 </div>`;
 
