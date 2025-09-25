@@ -51,7 +51,7 @@ Main PID: 1337 (python3)
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=OkeyAmy&theme=dark&hide_border=true&background=000000&stroke=00ff00&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=000000&stroke=00ff00&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
