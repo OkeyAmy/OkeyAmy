@@ -90,9 +90,68 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 
 ```bash
-$ find /home/okey/repositories -type d -name ".git" | head -6
-# No active repositories found at this time
+$ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
+   cd "$(dirname "$repo")"
+   printf "%-40s %s ⭐\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
+done
+
+# ACTIVE REPOSITORIES (live GitHub scan)
+OkeyAmy                                  2025-09-25 ⭐
+eventbuddy                               2025-09-24 ⭐
+Eventbuddy-Sensay                        2025-09-18 ⭐
+regu-graph-explorer                      2025-09-11 ⭐
+sats-allocator                           2025-08-10 ⭐
+bimglitz-sparkle-boutique                2025-08-08 ⭐
+
+$ git --version && git log --oneline --graph --all -5 2>/dev/null
+git version 2.42.0
+* Latest development commits (live data from 6 repositories)
+* Real commit history synchronized from: github.com/OkeyAmy
+* Contribution frequency: 6 repositories updated this month
 ```
+
+<div align="center">
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/OkeyAmy">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/eventbuddy">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=eventbuddy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/Eventbuddy-Sensay">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Eventbuddy-Sensay&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/regu-graph-explorer">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=regu-graph-explorer&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/sats-allocator">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=sats-allocator&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/bimglitz-sparkle-boutique">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=bimglitz-sparkle-boutique&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
@@ -113,7 +172,7 @@ $ find /home/okey/repositories -type d -name ".git" | head -6
 ![Profile Views](https://komarev.com/ghpvc/?username=OkeyAmy&style=flat-square&color=brightgreen&label=visitors)
 ![Followers](https://img.shields.io/github/followers/OkeyAmy?style=flat-square&color=blue&label=followers&logo=github)
 ![Stars](https://img.shields.io/github/stars/OkeyAmy?style=flat-square&color=yellow&label=stars&affiliations=OWNER&logo=github)
-![Repos](https://img.shields.io/badge/repos-0-green?style=flat-square)
+![Repos](https://img.shields.io/badge/repos-6-green?style=flat-square)
 
 </div>
 
