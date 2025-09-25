@@ -49,9 +49,9 @@ Main PID: 1337 (python3)
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=0d1117&stroke=00ff00&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=000000&stroke=00ff00&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
@@ -61,7 +61,7 @@ Main PID: 1337 (python3)
 
 <div align="center">
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=OkeyAmy&layout=donut&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&langs_count=8&size_weight=0.5&count_weight=0.5)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=OkeyAmy&layout=donut&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&langs_count=8&size_weight=0.5&count_weight=0.5)
 
 </div>
 
@@ -90,68 +90,9 @@ $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 
 ```bash
-$ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
-   cd "$(dirname "$repo")"
-   printf "%-40s %s ⭐\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
-done
-
-# ACTIVE REPOSITORIES (live GitHub scan)
-OkeyAmy                                  2025-09-25 ⭐
-eventbuddy                               2025-09-24 ⭐
-Eventbuddy-Sensay                        2025-09-18 ⭐
-regu-graph-explorer                      2025-09-11 ⭐
-sats-allocator                           2025-08-10 ⭐
-bimglitz-sparkle-boutique                2025-08-08 ⭐
-
-$ git --version && git log --oneline --graph --all -5 2>/dev/null
-git version 2.42.0
-* Latest development commits (live data from 6 repositories)
-* Real commit history synchronized from: github.com/OkeyAmy
-* Contribution frequency: 6 repositories updated this month
+$ find /home/okey/repositories -type d -name ".git" | head -6
+# No active repositories found at this time
 ```
-
-<div align="center">
-
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/OkeyAmy/OkeyAmy">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/OkeyAmy/eventbuddy">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=eventbuddy&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/OkeyAmy/Eventbuddy-Sensay">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Eventbuddy-Sensay&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/OkeyAmy/regu-graph-explorer">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=regu-graph-explorer&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/OkeyAmy/sats-allocator">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=sats-allocator&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/OkeyAmy/bimglitz-sparkle-boutique">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=bimglitz-sparkle-boutique&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-  </tr>
-</table>
-
-</div>
 
 ---
 
@@ -159,7 +100,7 @@ git version 2.42.0
 
 <div align="center">
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=OkeyAmy&theme=github-dark&hide_border=true&bg_color=0d1117&color=00ff00&line=ff6b35&point=c9d1d9&area=true&area_color=00ff00)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=OkeyAmy&theme=github-dark&hide_border=true&bg_color=000000&color=00ff00&line=ff6b35&point=c9d1d9&area=true&area_color=00ff00)
 
 </div>
 
@@ -172,7 +113,7 @@ git version 2.42.0
 ![Profile Views](https://komarev.com/ghpvc/?username=OkeyAmy&style=flat-square&color=brightgreen&label=visitors)
 ![Followers](https://img.shields.io/github/followers/OkeyAmy?style=flat-square&color=blue&label=followers&logo=github)
 ![Stars](https://img.shields.io/github/stars/OkeyAmy?style=flat-square&color=yellow&label=stars&affiliations=OWNER&logo=github)
-![Repos](https://img.shields.io/badge/repos-6-green?style=flat-square)
+![Repos](https://img.shields.io/badge/repos-0-green?style=flat-square)
 
 </div>
 
