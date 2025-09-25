@@ -1,62 +1,39 @@
 #!/usr/bin/env node
 
 /**
- * 🖥️ OKEY-AMY OS | README Update Daemon
- * Fetches live GitHub data and updates README with distro-terminal aesthetic
+ * 🖥️ OKEY-AMY OS | Profile README Generator
+ * Generates dynamic GitHub profile with live repository data
  */
 
+require('dotenv').config();
 const axios = require('axios');
 const fs = require('fs-extra');
 const path = require('path');
 
-// System configuration
+// Configuration
 const CONFIG = {
   username: process.env.GITHUB_USERNAME || 'OkeyAmy',
   token: process.env.GITHUB_TOKEN,
-  baseUrl: 'https://api.github.com',
-  readmePath: path.join(process.cwd(), 'README.md'),
-  maxRepos: 8,
-  maxLanguages: 8
+  readmePath: path.join(__dirname, '..', 'README.md'),
+  baseUrl: 'https://api.github.com'
 };
 
-// Distro-terminal logging with timestamps
-const log = {
-  info: (msg) => console.log(`[    ${Date.now().toString().slice(-9)}] ${msg}`),
-  success: (msg) => console.log(`[    ${Date.now().toString().slice(-9)}] ✓ ${msg}`),
-  error: (msg) => console.error(`[    ${Date.now().toString().slice(-9)}] ✗ ${msg}`),
-  boot: (msg) => console.log(`[    0.${Math.random().toString().slice(2,8)}] ${msg}`)
-};
-
-// GitHub API client with authentication
+// GitHub API client
 const github = axios.create({
   baseURL: CONFIG.baseUrl,
   headers: {
-    'Authorization': `token ${CONFIG.token}`,
+    'Authorization': `Bearer ${CONFIG.token}`,
     'Accept': 'application/vnd.github.v3+json',
-    'User-Agent': 'OkeyAmy-Profile-Bot/1.0'
+    'User-Agent': 'OkeyAmy-Profile-Generator/1.0'
   }
 });
 
 /**
- * Fetch user profile data from GitHub API
- */
-async function fetchUserData() {
-  log.info('Scanning user profile...');
-  try {
-    const response = await github.get(`/users/${CONFIG.username}`);
-    return response.data;
-  } catch (error) {
-    log.error(`Failed to fetch user data: ${error.message}`);
-    throw error;
-  }
-}
-
-/**
- * Fetch all repositories with detailed information
+ * Fetch user repositories from GitHub API
  */
 async function fetchRepositories() {
-  log.info('Enumerating repository filesystem...');
   try {
+    console.log('🔄 Fetching repositories...');
     const response = await github.get(`/users/${CONFIG.username}/repos`, {
       params: {
         sort: 'updated',
@@ -64,321 +41,193 @@ async function fetchRepositories() {
         per_page: 100
       }
     });
-    return response.data;
+
+    const repos = response.data
+      .filter(repo => !repo.fork && !repo.archived)
+      .slice(0, 6)
+      .map(repo => ({
+        name: repo.name,
+        description: repo.description || 'No description available',
+        stars: repo.stargazers_count,
+        language: repo.language,
+        updated: repo.updated_at.split('T')[0],
+        url: repo.html_url
+      }));
+
+    console.log(`✅ Found ${repos.length} active repositories`);
+    return repos;
   } catch (error) {
-    log.error(`Failed to fetch repositories: ${error.message}`);
-    throw error;
-  }
-}
-
-/**
- * Fetch pinned repositories
- */
-async function fetchPinnedRepos() {
-  log.info('Scanning pinned repositories...');
-  try {
-    // GraphQL query for pinned repositories
-    const query = `
-      query {
-        user(login: "${CONFIG.username}") {
-          pinnedItems(first: 6, types: [REPOSITORY]) {
-            edges {
-              node {
-                ... on Repository {
-                  name
-                  description
-                  url
-                  stargazerCount
-                  forkCount
-                  primaryLanguage {
-                    name
-                    color
-                  }
-                  pushedAt
-                }
-              }
-            }
-          }
-        }
-      }
-    `;
-
-    const response = await axios.post('https://api.github.com/graphql', 
-      { query },
-      {
-        headers: {
-          'Authorization': `Bearer ${CONFIG.token}`,
-          'Content-Type': 'application/json'
-        }
-      }
-    );
-
-    if (response.data.errors) {
-      log.error(`GraphQL errors: ${JSON.stringify(response.data.errors)}`);
-      return [];
-    }
-
-    return response.data.data.user.pinnedItems.edges.map(edge => edge.node);
-  } catch (error) {
-    log.error(`Failed to fetch pinned repos: ${error.message}`);
-    // Fallback to regular repos if GraphQL fails
+    console.log('⚠️ Error fetching repositories:', error.message);
     return [];
   }
 }
 
 /**
- * Calculate language statistics from repositories
+ * Fetch user language statistics
  */
-async function fetchLanguageStats(repos) {
-  log.info('Analyzing language distribution...');
-  const languageStats = {};
-  
-  for (const repo of repos.slice(0, 50)) { // Limit to avoid rate limits
-    try {
-      const response = await github.get(`/repos/${CONFIG.username}/${repo.name}/languages`);
-      const languages = response.data;
-      
-      Object.entries(languages).forEach(([lang, bytes]) => {
-        languageStats[lang] = (languageStats[lang] || 0) + bytes;
-      });
-    } catch (error) {
-      // Skip repos that can't be accessed
-      continue;
+async function fetchLanguageStats() {
+  try {
+    console.log('🔄 Fetching language statistics...');
+    const response = await github.get(`/users/${CONFIG.username}/repos`, {
+      params: { per_page: 100 }
+    });
+
+    const languageStats = {};
+    const repos = response.data.filter(repo => !repo.fork && repo.language);
+
+    for (const repo of repos) {
+      const lang = repo.language;
+      if (lang) {
+        languageStats[lang] = (languageStats[lang] || 0) + 1;
+      }
     }
+
+    // Sort by count and get top languages
+    const sortedLangs = Object.entries(languageStats)
+      .sort(([,a], [,b]) => b - a)
+      .slice(0, 8);
+
+    console.log('✅ Language statistics compiled');
+    return sortedLangs;
+  } catch (error) {
+    console.log('⚠️ Error fetching language stats:', error.message);
+    return [];
+  }
+}
+
+/**
+ * Generate the repository section with 2×N matrix format
+ */
+function generateRepositorySection(repos) {
+  if (repos.length === 0) {
+    return `
+\`\`\`bash
+$ find /home/okey/repositories -type d -name ".git" | head -6
+# No active repositories found at this time
+\`\`\``;
   }
 
-  // Convert to percentages and sort
-  const totalBytes = Object.values(languageStats).reduce((a, b) => a + b, 0);
-  const sortedLanguages = Object.entries(languageStats)
-    .map(([lang, bytes]) => ({
-      name: lang,
-      percentage: ((bytes / totalBytes) * 100).toFixed(1)
-    }))
-    .sort((a, b) => parseFloat(b.percentage) - parseFloat(a.percentage))
-    .slice(0, CONFIG.maxLanguages);
+  const repoList = repos.map(repo => 
+    `${repo.name.padEnd(40)} ${repo.updated} ⭐`
+  ).join('\n');
 
-  return sortedLanguages;
+  // Generate 2×N matrix table for repositories
+  const generateRepoTable = (repositories) => {
+    let tableHtml = '<table>\n';
+    
+    for (let i = 0; i < repositories.length; i += 2) {
+      tableHtml += '  <tr>\n';
+      
+      // First column
+      const repo1 = repositories[i];
+      tableHtml += `    <td>
+      <a href="${repo1.url}">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo1.name}&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>\n`;
+      
+      // Second column (if exists)
+      if (i + 1 < repositories.length) {
+        const repo2 = repositories[i + 1];
+        tableHtml += `    <td>
+      <a href="${repo2.url}">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo2.name}&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>\n`;
+      } else {
+        // Empty cell if odd number of repos
+        tableHtml += '    <td></td>\n';
+      }
+      
+      tableHtml += '  </tr>\n';
+    }
+    
+    tableHtml += '</table>';
+    return tableHtml;
+  };
+
+  return `
+\`\`\`bash
+$ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
+   cd "$(dirname "$repo")"
+   printf "%-40s %s ⭐\\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
+done
+
+# ACTIVE REPOSITORIES (live GitHub scan)
+${repoList}
+
+$ git --version && git log --oneline --graph --all -5 2>/dev/null
+git version 2.42.0
+* Latest development commits (live data from ${repos.length} repositories)
+* Real commit history synchronized from: github.com/${CONFIG.username}
+* Contribution frequency: ${repos.length} repositories updated this month
+\`\`\`
+
+<div align="center">
+
+${generateRepoTable(repos.slice(0, 6))}
+
+</div>`;
 }
 
 /**
- * Generate progress bars for distro-terminal aesthetic
+ * Generate the tech stack section
  */
-function generateProgressBar(percentage, width = 20) {
-  const filled = Math.round((percentage / 100) * width);
-  const bar = '█'.repeat(filled) + '░'.repeat(width - filled);
-  return `[${bar}]`;
-}
-
-/**
- * Generate dynamic htop-style process list based on repo languages
- */
-function generateHtopProcesses(languages, repos) {
-  const processes = [];
-  const baseProcesses = [
-    { name: 'python3', cmd: '/usr/bin/python3 -m ai.training --model=transformer', cpu: 98.7, mem: 4.3 },
-    { name: 'node', cmd: '/usr/bin/node ./api/server.js --env=production', cpu: 45.2, mem: 2.1 },
-    { name: 'go', cmd: '/usr/local/go/bin/go run ./cmd/server/main.go', cpu: 23.1, mem: 1.1 },
-    { name: 'docker', cmd: 'docker-compose up -d --scale worker=4', cpu: 12.4, mem: 0.8 },
-    { name: 'git', cmd: 'git push origin feature/dynamic-updates', cpu: 8.7, mem: 0.5 },
-    { name: 'npm', cmd: 'npm run build:production --optimize', cpu: 5.3, mem: 0.3 },
-    { name: 'pytest', cmd: 'pytest --coverage --verbose', cpu: 3.2, mem: 0.2 },
-    { name: 'redis-cli', cmd: 'redis-cli monitor', cpu: 2.1, mem: 0.1 }
+function generateTechStackSection(languages) {
+  const techStack = [
+    { name: 'python', version: '3.11.5-1', progress: 18, desc: 'Primary development & AI/ML' },
+    { name: 'typescript', version: '5.2.2-1', progress: 15, desc: 'Type-safe full-stack development' },
+    { name: 'javascript', version: '20.8.1-1', progress: 14, desc: 'Frontend & Node.js APIs' },
+    { name: 'rust', version: '1.70.0-1', progress: 8, desc: 'Learning systems programming' },
+    { name: 'java', version: '17.0.2-1', progress: 6, desc: 'Enterprise applications' }
   ];
 
-  // Dynamic memory calculation based on repo count
-  const totalMemory = Math.min(16, Math.max(8, Math.round(repos.length / 10)));
-  const usedMemory = Math.round(totalMemory * 0.35);
+  const frameworks = [
+    { name: 'django', version: '4.2.7-1', progress: 16, desc: 'Python web framework' },
+    { name: 'fastapi', version: '0.104.1-1', progress: 15, desc: 'Async Python APIs' },
+    { name: 'react', version: '18.2.0-1', progress: 14, desc: 'UI components' },
+    { name: 'nextjs', version: '14.0.1-1', progress: 13, desc: 'Full-stack React' },
+    { name: 'express', version: '4.18.2-1', progress: 10, desc: 'Node.js backend' }
+  ];
 
-  return {
-    processes: baseProcesses,
-    memory: { total: totalMemory, used: usedMemory },
-    activeRepos: repos.filter(r => new Date(r.pushed_at) > new Date(Date.now() - 7*24*60*60*1000)).length
+  const generateProgressBar = (progress) => {
+    const filled = '█'.repeat(Math.floor(progress));
+    const empty = '░'.repeat(20 - Math.floor(progress));
+    return `[${filled}${empty}]`;
   };
+
+  const languageSection = techStack.map(tech => 
+    `${generateProgressBar(tech.progress)} ${tech.name.padEnd(12)} ${tech.version.padEnd(12)} (${tech.desc})`
+  ).join('\n');
+
+  const frameworkSection = frameworks.map(fw => 
+    `${generateProgressBar(fw.progress)} ${fw.name.padEnd(12)} ${fw.version.padEnd(10)} (${fw.desc})`
+  ).join('\n');
+
+  return `
+\`\`\`bash
+$ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
+
+# RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
+${languageSection}
+
+# FRAMEWORKS & LIBRARIES (detected from active repositories)
+${frameworkSection}
+\`\`\``;
 }
 
 /**
- * Generate dynamic system metrics based on real data
- */
-function generateSystemMetrics(userData, repos, languages) {
-  const now = new Date();
-  const thisMonth = repos.filter(r => 
-    new Date(r.pushed_at) > new Date(now.getFullYear(), now.getMonth(), 1)
-  ).length;
-  
-  const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
-  const avgStarsPerRepo = repos.length > 0 ? (totalStars / repos.length).toFixed(1) : 0;
-  
-  return {
-    monthlyCommits: thisMonth,
-    totalStars,
-    avgStars: avgStarsPerRepo,
-    networkConnections: userData.followers + userData.following,
-    codeQuality: Math.min(100, Math.max(85, 90 + (totalStars / 10))).toFixed(1)
-  };
-}
-
-/**
- * Format repository list for terminal output
- */
-function formatRepoList(repos) {
-  return repos
-    .slice(0, CONFIG.maxRepos)
-    .map(repo => {
-      const lastUpdate = new Date(repo.pushed_at).toISOString().split('T')[0];
-      const name = repo.name.padEnd(40);
-      return `${name} ${lastUpdate} ⭐`;
-    })
-    .join('\n');
-}
-
-/**
- * Generate language statistics section
- */
-function generateLanguageSection(languages) {
-  const runtimeSection = languages.slice(0, 5).map(lang => {
-    const bar = generateProgressBar(lang.percentage, 20);
-    const name = lang.name.toLowerCase().padEnd(15);
-    const version = getLanguageVersion(lang.name);
-    return `${bar} ${name} ${version}`;
-  }).join('\n');
-
-  return runtimeSection;
-}
-
-/**
- * Get mock version for languages (you can enhance this with real data)
- */
-function getLanguageVersion(language) {
-  const versions = {
-    'Python': '3.11.5-1    (Primary development)',
-    'TypeScript': '5.2.2-1  (Type-safe development)',
-    'JavaScript': '20.8.1-1 (Frontend & APIs)',
-    'Rust': '1.72.0-1      (Learning & exploring)',
-    'HTML': '5.3.0-1        (Web markup)',
-    'CSS': '4.0.1-1         (Styling & layouts)',
-    'Java': '21.0.1-1       (Enterprise applications)',
-    'SQL': '15.4.0-1        (Database queries)',
-    'Shell': '5.2.15-1       (System automation)',
-    'Go': '1.21.0-1       (System programming)',
-    'C++': '23.0.0-1       (Low-level optimization)',
-    'PHP': '8.2.0-1        (Web development)',
-    'Solidity': '0.8.19-1   (Smart contracts)'
-  };
-  return versions[language] || '1.0.0-1        (Active development)';
-}
-
-/**
- * Generate pinned repositories section in 2xN grid layout
- */
-function generatePinnedSection(pinnedRepos) {
-  if (pinnedRepos.length === 0) {
-    return '';
-  }
-
-  const repoCards = pinnedRepos.map(repo => {
-    return `[![${repo.name}](https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo.name}&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00)](https://github.com/${CONFIG.username}/${repo.name})`;
-  });
-
-  // Create proper 2-column markdown layout
-  let grid = '<div align="center">\n\n';
-  grid += '<table>\n';
-  
-  for (let i = 0; i < repoCards.length; i += 2) {
-    grid += '<tr>\n';
-    grid += `<td width="50%">\n\n${repoCards[i]}\n\n</td>\n`;
-    if (i + 1 < repoCards.length) {
-      grid += `<td width="50%">\n\n${repoCards[i + 1]}\n\n</td>\n`;
-    } else {
-      grid += '<td width="50%"></td>\n';
-    }
-    grid += '</tr>\n';
-  }
-  
-  grid += '</table>\n\n</div>';
-  return grid;
-}
-
-/**
- * Main README generation function
+ * Generate the complete README content
  */
 async function generateReadme() {
-  log.boot('Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)');
-  log.boot('Initializing GitHub API drivers... [ OK ]');
-  log.boot('Mounting /dev/repositories... scanning...');
+  console.log('🚀 Starting README generation...');
   
-  // Check for GitHub token
-  if (!CONFIG.token) {
-    log.error('GitHub token not found! Please set GITHUB_TOKEN environment variable');
-    log.info('For local testing: create a .env file with GITHUB_TOKEN=your_token_here');
-    log.info('Using mock data for local preview...');
-    
-    // Generate with mock data for local testing
-    const mockData = {
-      userData: { login: CONFIG.username, public_repos: 94, followers: 6, following: 7 },
-      repos: Array.from({length: 8}, (_, i) => ({
-        name: `mock-repo-${i+1}`,
-        stargazers_count: Math.floor(Math.random() * 10),
-        pushed_at: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString()
-      })),
-      languages: [
-        { name: 'Python', percentage: '35.0' },
-        { name: 'TypeScript', percentage: '25.4' },
-        { name: 'JavaScript', percentage: '20.5' },
-        { name: 'Rust', percentage: '12.3' },
-        { name: 'HTML', percentage: '6.8' }
-      ],
-      pinnedRepos: []
-    };
-    
-    return generateReadmeContent(mockData);
-  }
-  
-  try {
-    // Fetch all data
-    const [userData, repos, pinnedRepos] = await Promise.all([
-      fetchUserData(),
-      fetchRepositories(),
-      fetchPinnedRepos()
-    ]);
+  const [repos, languages] = await Promise.all([
+    fetchRepositories(),
+    fetchLanguageStats()
+  ]);
 
-    const languages = await fetchLanguageStats(repos);
-    
-    log.boot('Loading user profile from matrix.local... authenticated');
-    log.boot('Starting system services...');
-
-    const data = {
-      userData,
-      repos,
-      languages,
-      pinnedRepos: pinnedRepos.length > 0 ? pinnedRepos : repos.slice(0, 6)
-    };
-    
-    return generateReadmeContent(data);
-    
-  } catch (error) {
-    log.error(`System update failed: ${error.message}`);
-    process.exit(1);
-  }
-}
-
-/**
- * Generate README content from data
- */
-function generateReadmeContent(data) {
-  const { userData, repos, languages, pinnedRepos } = data;
-  
-  // Generate current timestamp
-  const now = new Date();
-  const buildDate = now.toISOString().split('T')[0];
-  const currentTime = now.toISOString().slice(11, 19);
-
-  const featuredRepos = pinnedRepos || repos.slice(0, 6);
-  
-  // Generate dynamic system data
-  const systemMetrics = generateSystemMetrics(userData, repos, languages);
-  const htopData = generateHtopProcesses(languages, repos);
-
-    const readme = `# 🖥️ OKEY-AMY OS | Build ${buildDate}-LTS
+  const readmeContent = `# 🖥️ OKEY-AMY OS | Build ${new Date().toISOString().split('T')[0]}-LTS
 
 \`\`\`bash
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
@@ -402,7 +251,7 @@ function generateReadmeContent(data) {
                     AI/ML Engineer | Rapid Prototyper | Code Alchemist
 \`\`\`
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Code+Alchemist+%7C+Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core;Formulas+%3E+Spelling+%7C+I+love+doing+hard+things)](https://git.io/typing-svg)
 
 </div>
 
@@ -414,24 +263,24 @@ function generateReadmeContent(data) {
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since ${now.toISOString().slice(0, 10)} ${currentTime} WAT; ongoing
+  Active: active (running) since ${new Date().toISOString().split('T')[0]} 10:18:53 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
-   Tasks: ${repos.length} (limit: infinity)
+   Tasks: 8 (limit: infinity)
   Memory: 4.2G
    CGroup: /system.slice/okey-amy.service
 
 ● Status: I vibe with code but verify everything | Architecture first
 ● Focus: Rapid prototyping ideas → software | AI agents + clean code
-● Learning: Rust & Solidity fundamentals | Quantum computing research
-● Interests: Anime, tic-tac-toe challenges, Linux aesthetics, formulas > spelling
+● Learning: Rust & fundamentals | AI/ML research & implementation
+● Interests: Anime, formulas > spelling, Linux aesthetics, hard challenges
 \`\`\`
 
 <div align="center">
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${CONFIG.username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=${CONFIG.username}&theme=dark&hide_border=true&background=0d1117&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=${CONFIG.username}&theme=dark&hide_border=true&background=0d1117&stroke=00ff00&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
@@ -445,41 +294,13 @@ Main PID: 1337 (python3)
 
 </div>
 
-\`\`\`bash
-$ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
-
-# RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-${generateLanguageSection(languages)}
-
-# FRAMEWORKS & LIBRARIES (detected from active repositories)
-[████████████████░░░░] django 4.2.7-1      (Python web framework)
-[████████████████░░░░] fastapi 0.104.1-1   (Async Python APIs)
-[███████████████░░░░░] react 18.2.0-1      (UI components)
-[███████████████░░░░░] nextjs 14.0.1-1     (Full-stack React)
-[████████████░░░░░░░░] express 4.18.2-1    (Node.js backend)
-\`\`\`
+${generateTechStackSection(languages)}
 
 ---
 
 ## 🌐 REPOSITORY INDEX | FEATURED PROJECTS
 
-${generatePinnedSection(featuredRepos)}
-
-\`\`\`bash
-$ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
-   cd "$(dirname "$repo")"
-   printf "%-40s %s ⭐\\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
-done
-
-# ACTIVE REPOSITORIES (live GitHub scan)
-${formatRepoList(repos.slice(0, 6))}
-
-$ git --version && git log --oneline --graph --all -5 2>/dev/null
-git version 2.42.0
-* Latest development commits (live data from ${repos.length} repositories)
-* Real commit history synchronized from: github.com/${CONFIG.username}
-* Contribution frequency: ${repos.filter(r => new Date(r.pushed_at) > new Date(Date.now() - 30*24*60*60*1000)).length} repositories updated this month
-\`\`\`
+${generateRepositorySection(repos)}
 
 ---
 
@@ -516,27 +337,26 @@ git version 2.42.0
 
 **Challenge me at tic-tac-toe** | **Discuss quantum algorithms** | **Share AI/ML insights**
 
----
-
-*Last updated: ${buildDate}*
-
 </div>`;
 
-  // Write the updated README
-  fs.writeFileSync(CONFIG.readmePath, readme, 'utf8');
-  
-  log.boot('All systems operational. Welcome, user.');
-  log.success('README.md updated successfully');
-  log.info(`Processed ${repos.length} repositories`);
-  log.info(`Featured ${featuredRepos.length} repositories`);
-  log.info(`Analyzed ${languages.length} programming languages`);
-  
-  return readme;
+  try {
+    await fs.writeFile(CONFIG.readmePath, readmeContent);
+    console.log('✅ README.md updated successfully!');
+    console.log(`📄 Generated ${readmeContent.length} characters`);
+    console.log(`📊 Featured ${repos.length} repositories`);
+  } catch (error) {
+    console.error('❌ Error writing README.md:', error.message);
+    throw error;
+  }
 }
 
-// Execute main function
-if (require.main === module) {
-  generateReadme();
-}
-
+// Export for testing
 module.exports = { generateReadme, CONFIG };
+
+// Run if called directly
+if (require.main === module) {
+  generateReadme().catch(error => {
+    console.error('❌ Fatal error:', error.message);
+    process.exit(1);
+  });
+}

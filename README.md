@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2025-09-24-LTS
+# 🖥️ OKEY-AMY OS | Build 2025-09-25-LTS
 
 ```bash
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
@@ -22,7 +22,7 @@
                     AI/ML Engineer | Rapid Prototyper | Code Alchemist
 ```
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Code+Alchemist+%7C+Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core;Formulas+%3E+Spelling+%7C+I+love+doing+hard+things)](https://git.io/typing-svg)
 
 </div>
 
@@ -34,7 +34,7 @@
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since 2025-09-24 10:12:22 WAT; ongoing
+  Active: active (running) since 2025-09-25 10:18:53 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
    Tasks: 8 (limit: infinity)
@@ -43,15 +43,15 @@ Main PID: 1337 (python3)
 
 ● Status: I vibe with code but verify everything | Architecture first
 ● Focus: Rapid prototyping ideas → software | AI agents + clean code
-● Learning: Rust & Solidity fundamentals | Quantum computing research
-● Interests: Anime, tic-tac-toe challenges, Linux aesthetics, formulas > spelling
+● Learning: Rust & fundamentals | AI/ML research & implementation
+● Interests: Anime, formulas > spelling, Linux aesthetics, hard challenges
 ```
 
 <div align="center">
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=OkeyAmy&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00&count_private=true&include_all_commits=true&ring_color=00ff00)
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=0d1117&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
+![GitHub Streak](https://streak-stats.demolab.com/?user=OkeyAmy&theme=dark&hide_border=true&background=0d1117&stroke=00ff00&ring=00ff00&fire=ff6b35&currStreakLabel=00ff00&sideLabels=c9d1d9&dates=c9d1d9)
 
 </div>
 
@@ -65,28 +65,28 @@ Main PID: 1337 (python3)
 
 </div>
 
+
 ```bash
 $ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
 
 # RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-[███████░░░░░░░░░░░░░] python          3.11.5-1    (Primary development)
-[█████░░░░░░░░░░░░░░░] typescript      5.2.2-1  (Type-safe development)
-[████░░░░░░░░░░░░░░░░] javascript      20.8.1-1 (Frontend & APIs)
-[██░░░░░░░░░░░░░░░░░░] rust            1.72.0-1      (Learning & exploring)
-[█░░░░░░░░░░░░░░░░░░░] html            5.3.0-1        (Web markup)
+[██████████████████░░] python       3.11.5-1     (Primary development & AI/ML)
+[███████████████░░░░░] typescript   5.2.2-1      (Type-safe full-stack development)
+[██████████████░░░░░░] javascript   20.8.1-1     (Frontend & Node.js APIs)
+[████████░░░░░░░░░░░░] rust         1.70.0-1     (Learning systems programming)
+[██████░░░░░░░░░░░░░░] java         17.0.2-1     (Enterprise applications)
 
 # FRAMEWORKS & LIBRARIES (detected from active repositories)
-[████████████████░░░░] django 4.2.7-1      (Python web framework)
-[████████████████░░░░] fastapi 0.104.1-1   (Async Python APIs)
-[███████████████░░░░░] react 18.2.0-1      (UI components)
-[███████████████░░░░░] nextjs 14.0.1-1     (Full-stack React)
-[████████████░░░░░░░░] express 4.18.2-1    (Node.js backend)
+[████████████████░░░░] django       4.2.7-1    (Python web framework)
+[███████████████░░░░░] fastapi      0.104.1-1  (Async Python APIs)
+[██████████████░░░░░░] react        18.2.0-1   (UI components)
+[█████████████░░░░░░░] nextjs       14.0.1-1   (Full-stack React)
+[██████████░░░░░░░░░░] express      4.18.2-1   (Node.js backend)
 ```
 
 ---
 
 ## 🌐 REPOSITORY INDEX | FEATURED PROJECTS
-
 
 
 ```bash
@@ -96,19 +96,62 @@ $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo;
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
-mock-repo-1                              2025-09-24 ⭐
-mock-repo-2                              2025-09-23 ⭐
-mock-repo-3                              2025-09-22 ⭐
-mock-repo-4                              2025-09-21 ⭐
-mock-repo-5                              2025-09-20 ⭐
-mock-repo-6                              2025-09-19 ⭐
+OkeyAmy                                  2025-09-25 ⭐
+eventbuddy                               2025-09-24 ⭐
+Eventbuddy-Sensay                        2025-09-18 ⭐
+regu-graph-explorer                      2025-09-11 ⭐
+sats-allocator                           2025-08-10 ⭐
+bimglitz-sparkle-boutique                2025-08-08 ⭐
 
 $ git --version && git log --oneline --graph --all -5 2>/dev/null
 git version 2.42.0
-* Latest development commits (live data from 8 repositories)
+* Latest development commits (live data from 6 repositories)
 * Real commit history synchronized from: github.com/OkeyAmy
-* Contribution frequency: 8 repositories updated this month
+* Contribution frequency: 6 repositories updated this month
 ```
+
+<div align="center">
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/OkeyAmy">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/eventbuddy">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=eventbuddy&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/Eventbuddy-Sensay">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Eventbuddy-Sensay&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/regu-graph-explorer">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=regu-graph-explorer&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/sats-allocator">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=sats-allocator&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/bimglitz-sparkle-boutique">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=bimglitz-sparkle-boutique&theme=dark&hide_border=true&bg_color=0d1117,1a1a1a&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
@@ -129,7 +172,7 @@ git version 2.42.0
 ![Profile Views](https://komarev.com/ghpvc/?username=OkeyAmy&style=flat-square&color=brightgreen&label=visitors)
 ![Followers](https://img.shields.io/github/followers/OkeyAmy?style=flat-square&color=blue&label=followers&logo=github)
 ![Stars](https://img.shields.io/github/stars/OkeyAmy?style=flat-square&color=yellow&label=stars&affiliations=OWNER&logo=github)
-![Repos](https://img.shields.io/badge/repos-8-green?style=flat-square)
+![Repos](https://img.shields.io/badge/repos-6-green?style=flat-square)
 
 </div>
 
@@ -144,9 +187,5 @@ git version 2.42.0
 [![Twitter](https://img.shields.io/badge/Twitter-okey__amy-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=0d1117)](https://twitter.com/okey_amy)
 
 **Challenge me at tic-tac-toe** | **Discuss quantum algorithms** | **Share AI/ML insights**
-
----
-
-*Last updated: 2025-09-24*
 
 </div>
