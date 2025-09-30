@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2025-09-29-LTS
+# 🖥️ OKEY-AMY OS | Build 2025-09-30-LTS
 
 ```bash
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
@@ -34,7 +34,7 @@
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since 2025-09-29 10:18:53 WAT; ongoing
+  Active: active (running) since 2025-09-30 10:18:53 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
    Tasks: 8 (limit: infinity)
@@ -96,12 +96,12 @@ $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo;
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
+Eventbuddy-Sensay                        2025-09-29 ⭐
+OkeyAmy                                  2025-09-29 ⭐
 Expo                                     2025-09-28 ⭐
 Glow_Sats-Allocator                      2025-09-28 ⭐
 studyaide                                2025-09-28 ⭐
-OkeyAmy                                  2025-09-28 ⭐
 eventbuddy                               2025-09-26 ⭐
-Eventbuddy-Sensay                        2025-09-18 ⭐
 
 $ git --version && git log --oneline --graph --all -5 2>/dev/null
 git version 2.42.0
@@ -113,6 +113,18 @@ git version 2.42.0
 <div align="center">
 
 <table>
+  <tr>
+    <td>
+      <a href="https://github.com/OkeyAmy/Eventbuddy-Sensay">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Eventbuddy-Sensay&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/OkeyAmy/OkeyAmy">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+  </tr>
   <tr>
     <td>
       <a href="https://github.com/OkeyAmy/Expo">
@@ -132,20 +144,8 @@ git version 2.42.0
       </a>
     </td>
     <td>
-      <a href="https://github.com/OkeyAmy/OkeyAmy">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/OkeyAmy/eventbuddy">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=eventbuddy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/OkeyAmy/Eventbuddy-Sensay">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Eventbuddy-Sensay&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
       </a>
     </td>
   </tr>
