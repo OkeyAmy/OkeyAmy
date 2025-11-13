@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2025-11-12-LTS
+# 🖥️ OKEY-AMY OS | Build 2025-11-13-LTS
 
 ```bash
 [    0.000000] Booting Okey-Amy Linux 6.10.3-arch1-1 (tty1)
@@ -34,7 +34,7 @@
 $ systemctl status okey-amy.service
 ● okey-amy.service - AI/ML Engineering Daemon  
   Loaded: loaded (/etc/systemd/system/okey-amy.service; enabled)
-  Active: active (running) since 2025-11-12 10:18:53 WAT; ongoing
+  Active: active (running) since 2025-11-13 10:18:53 WAT; ongoing
   Process: 1337 ExecStart=/usr/bin/python3 -m okey_amy.core
 Main PID: 1337 (python3)
    Tasks: 8 (limit: infinity)
@@ -96,12 +96,12 @@ $ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo;
 done
 
 # ACTIVE REPOSITORIES (live GitHub scan)
-OkeyAmy                                  2025-11-11 ⭐
+Brand-Marketing-                         2025-11-12 ⭐
+OkeyAmy                                  2025-11-12 ⭐
 VoiceScribe                              2025-11-10 ⭐
 social-amplifier                         2025-11-07 ⭐
 eventbuddy                               2025-11-04 ⭐
 rust-Learning                            2025-10-10 ⭐
-Eventbuddy-Sensay                        2025-09-29 ⭐
 
 $ git --version && git log --oneline --graph --all -5 2>/dev/null
 git version 2.42.0
@@ -115,37 +115,37 @@ git version 2.42.0
 <table>
   <tr>
     <td>
+      <a href="https://github.com/OkeyAmy/Brand-Marketing-">
+        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Brand-Marketing-&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
+      </a>
+    </td>
+    <td>
       <a href="https://github.com/OkeyAmy/OkeyAmy">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
       </a>
     </td>
+  </tr>
+  <tr>
     <td>
       <a href="https://github.com/OkeyAmy/VoiceScribe">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=VoiceScribe&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
       </a>
     </td>
-  </tr>
-  <tr>
     <td>
       <a href="https://github.com/OkeyAmy/social-amplifier">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=social-amplifier&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
       </a>
     </td>
+  </tr>
+  <tr>
     <td>
       <a href="https://github.com/OkeyAmy/eventbuddy">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=eventbuddy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
       </a>
     </td>
-  </tr>
-  <tr>
     <td>
       <a href="https://github.com/OkeyAmy/rust-Learning">
         <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=rust-Learning&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/OkeyAmy/Eventbuddy-Sensay">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Eventbuddy-Sensay&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
       </a>
     </td>
   </tr>
