@@ -113,6 +113,10 @@ Desktop.ini
 
 SETUP.md
 
+# Git worktrees & superpowers
+.worktrees/
+.superpowers/
+
 
 
 
