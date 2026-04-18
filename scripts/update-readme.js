@@ -152,48 +152,32 @@ ${generateRepoTable(repos.slice(0, 6))}
 }
 
 /**
- * Generate the tech stack section
+ * Generate tech stack section from real language stats
  */
 function generateTechStackSection(languages) {
-  const techStack = [
-    { name: 'python', version: '3.11.5-1', progress: 18, desc: 'Primary development & AI/ML' },
-    { name: 'typescript', version: '5.2.2-1', progress: 15, desc: 'Type-safe full-stack development' },
-    { name: 'javascript', version: '20.8.1-1', progress: 14, desc: 'Frontend & Node.js APIs' },
-    { name: 'rust', version: '1.70.0-1', progress: 8, desc: 'Learning systems programming' },
-    { name: 'java', version: '17.0.2-1', progress: 6, desc: 'Enterprise applications' }
-  ];
+  if (languages.length === 0) {
+    return `
+\`\`\`bash
+$ pacman -Qs | sort -k2 -rn
+# No language data available
+\`\`\``;
+  }
 
-  const frameworks = [
-    { name: 'django', version: '4.2.7-1', progress: 16, desc: 'Python web framework' },
-    { name: 'fastapi', version: '0.104.1-1', progress: 15, desc: 'Async Python APIs' },
-    { name: 'react', version: '18.2.0-1', progress: 14, desc: 'UI components' },
-    { name: 'nextjs', version: '14.0.1-1', progress: 13, desc: 'Full-stack React' },
-    { name: 'express', version: '4.18.2-1', progress: 10, desc: 'Node.js backend' }
-  ];
-
-  const generateProgressBar = (progress) => {
-    const filled = '█'.repeat(Math.floor(progress));
-    const empty = '░'.repeat(20 - Math.floor(progress));
-    return `[${filled}${empty}]`;
+  const generateBar = (pct) => {
+    const filled = Math.round(pct / 5);
+    return '[' + '█'.repeat(filled) + '░'.repeat(20 - filled) + ']';
   };
 
-  const languageSection = techStack.map(tech => 
-    `${generateProgressBar(tech.progress)} ${tech.name.padEnd(12)} ${tech.version.padEnd(12)} (${tech.desc})`
-  ).join('\n');
-
-  const frameworkSection = frameworks.map(fw => 
-    `${generateProgressBar(fw.progress)} ${fw.name.padEnd(12)} ${fw.version.padEnd(10)} (${fw.desc})`
+  const lines = languages.map(([lang, pct]) =>
+    `${generateBar(pct)} ${lang.toLowerCase().padEnd(14)} ${String(pct).padStart(3)}%`
   ).join('\n');
 
   return `
 \`\`\`bash
-$ pacman -Qs --explicit | grep -E "dev|framework|lang" | head -10
+$ pacman -Qs | sort -k2 -rn
+# languages — calculated from repo counts
 
-# RUNTIME ENVIRONMENTS & LANGUAGES (live repository analysis)
-${languageSection}
-
-# FRAMEWORKS & LIBRARIES (detected from active repositories)
-${frameworkSection}
+${lines}
 \`\`\``;
 }
 
@@ -329,7 +313,7 @@ ${generateRepositorySection(repos)}
 }
 
 // Export for testing
-module.exports = { generateReadme, computeLanguageStats, CONFIG };
+module.exports = { generateReadme, computeLanguageStats, generateTechStackSection, CONFIG };
 
 // Run if called directly
 if (require.main === module) {
