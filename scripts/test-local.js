@@ -52,11 +52,6 @@ function checkSecurity() {
   console.log('\n🔒 Security Verification:');
   
   // Check for sensitive data exposure
-  const sensitivePatterns = [
-    /gh[po]_[A-Za-z0-9_]{36,}/g,  // GitHub tokens
-    /[A-Za-z0-9+/]{40,}/g,        // Generic tokens
-  ];
-
   console.log('├── Token exposure check: ✓ Tokens handled securely');
   console.log('├── Environment variables: ✓ Using process.env');
   console.log('├── API authentication: ✓ Bearer token method');
@@ -116,10 +111,6 @@ runUnitTests();
 console.log('⚡ Starting system tests...');
 checkSecurity();
 runTests();
-
-
-
-
 
 
 

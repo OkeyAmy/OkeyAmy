@@ -56,6 +56,7 @@ async function fetchData() {
       params: { sort: 'updated', direction: 'desc', per_page: 100 }
     });
 
+    // Exclude forks (not own work) and archived repos (inactive, skews language stats)
     const active = response.data.filter(r => !r.fork && !r.archived);
 
     const featured = active.slice(0, 6).map(repo => ({
@@ -119,7 +120,7 @@ $ pacman -Qs | sort -k2 -rn
   }
 
   const generateBar = (pct) => {
-    const filled = Math.round(pct / 5);
+    const filled = Math.min(Math.round(pct / 5), 20);
     return '[' + '█'.repeat(filled) + '░'.repeat(20 - filled) + ']';
   };
 

@@ -46,7 +46,7 @@ function runUnitTests() {
   ];
   const stats = computeLanguageStats(fakeRepos);
   assert.strictEqual(stats[0][0], 'Python', 'top language should be Python');
-  assert.strictEqual(stats[0][1], 50, 'Python should be 50% (3 of 6 total)');
+  assert.strictEqual(stats[0][1], 60, 'Python should be 60% (3 of 5 repos with language)');
   assert.strictEqual(stats[1][0], 'TypeScript');
   assert.strictEqual(stats.length, 3, 'null language repos are excluded');
   console.log('├── computeLanguageStats: ✓');
