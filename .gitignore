@@ -116,10 +116,6 @@ SETUP.md
 # Git worktrees & superpowers
 .worktrees/
 .superpowers/
-
-
-
-
-
-
+docs/
+.remember/
 
