@@ -77,78 +77,33 @@ async function fetchData() {
 }
 
 /**
- * Generate the repository section with 2×N matrix format
+ * Generate repository section — card table only, no duplicate bash listing
  */
 function generateRepositorySection(repos) {
   if (repos.length === 0) {
     return `
 \`\`\`bash
-$ find /home/okey/repositories -type d -name ".git" | head -6
-# No active repositories found at this time
+$ ls ~/repos/
+# No active repositories found
 \`\`\``;
   }
 
-  const repoList = repos.map(repo => 
-    `${repo.name.padEnd(40)} ${repo.updated} ⭐`
-  ).join('\n');
-
-  // Generate 2×N matrix table for repositories
-  const generateRepoTable = (repositories) => {
-    let tableHtml = '<table>\n';
-    
-    for (let i = 0; i < repositories.length; i += 2) {
-      tableHtml += '  <tr>\n';
-      
-      // First column
-      const repo1 = repositories[i];
-      tableHtml += `    <td>
-      <a href="${repo1.url}">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo1.name}&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>\n`;
-      
-      // Second column (if exists)
-      if (i + 1 < repositories.length) {
-        const repo2 = repositories[i + 1];
-        tableHtml += `    <td>
-      <a href="${repo2.url}">
-        <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo2.name}&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" />
-      </a>
-    </td>\n`;
-      } else {
-        // Empty cell if odd number of repos
-        tableHtml += '    <td></td>\n';
-      }
-      
-      tableHtml += '  </tr>\n';
+  let tableHtml = '<table>\n';
+  for (let i = 0; i < repos.length; i += 2) {
+    tableHtml += '  <tr>\n';
+    const repo1 = repos[i];
+    tableHtml += `    <td><a href="${repo1.url}"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo1.name}&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>\n`;
+    if (i + 1 < repos.length) {
+      const repo2 = repos[i + 1];
+      tableHtml += `    <td><a href="${repo2.url}"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=${CONFIG.username}&repo=${repo2.name}&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>\n`;
+    } else {
+      tableHtml += '    <td></td>\n';
     }
-    
-    tableHtml += '</table>';
-    return tableHtml;
-  };
+    tableHtml += '  </tr>\n';
+  }
+  tableHtml += '</table>';
 
-  return `
-\`\`\`bash
-$ find /home/okey/repositories -type d -name ".git" | head -6 | while read repo; do
-   cd "$(dirname "$repo")"
-   printf "%-40s %s ⭐\\n" "$(basename $(pwd))" "$(git log -1 --format=%cd --date=short)"
-done
-
-# ACTIVE REPOSITORIES (live GitHub scan)
-${repoList}
-
-$ git --version && git log --oneline --graph --all -5 2>/dev/null
-git version 2.42.0
-* Latest development commits (live data from ${repos.length} repositories)
-* Real commit history synchronized from: github.com/${CONFIG.username}
-* Contribution frequency: ${repos.length} repositories updated this month
-\`\`\`
-
-<div align="center">
-
-${generateRepoTable(repos.slice(0, 6))}
-
-</div>`;
+  return `\n<div align="center">\n\n${tableHtml}\n\n</div>`;
 }
 
 /**
@@ -313,7 +268,7 @@ ${generateRepositorySection(repos)}
 }
 
 // Export for testing
-module.exports = { generateReadme, computeLanguageStats, generateTechStackSection, CONFIG };
+module.exports = { generateReadme, computeLanguageStats, generateTechStackSection, generateRepositorySection, CONFIG };
 
 // Run if called directly
 if (require.main === module) {
