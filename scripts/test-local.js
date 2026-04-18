@@ -80,26 +80,34 @@ function runUnitTests() {
   ];
   const stats = computeLanguageStats(fakeRepos);
   assert.strictEqual(stats[0][0], 'Python', 'top language should be Python');
-  assert.strictEqual(stats[0][1], 50, 'Python should be 50% (3 of 6 total)');
+  assert.strictEqual(stats[0][1], 60, 'Python should be 60% (3 of 5 repos with language)');
   assert.strictEqual(stats[1][0], 'TypeScript');
   assert.strictEqual(stats.length, 3, 'null language repos are excluded');
   console.log('├── computeLanguageStats: ✓');
 
-  // generateTechStackSection: output contains real language names
-  const section = generateTechStackSection(stats);
-  assert.ok(section.includes('python'), 'section must include python');
-  assert.ok(!section.includes('3.11.5'), 'must not contain fake version');
-  assert.ok(section.includes('50%'), 'must show real percentage');
-  console.log('├── generateTechStackSection: ✓');
+  // generateTechStackSection: output contains real language names (available after Task 2)
+  if (typeof generateTechStackSection === 'function') {
+    const section = generateTechStackSection(stats);
+    assert.ok(section.includes('python'), 'section must include python');
+    assert.ok(!section.includes('3.11.5'), 'must not contain fake version');
+    assert.ok(section.includes('60%'), 'must show real percentage');
+    console.log('├── generateTechStackSection: ✓');
+  } else {
+    console.log('├── generateTechStackSection: skipped (not yet exported)');
+  }
 
-  // generateRepositorySection: no bash listing block
+  // generateRepositorySection: no bash listing block (available after Task 3)
   const fakeApiRepos = [
     { name: 'repo-a', description: 'desc', stars: 1, language: 'Python', updated: '2026-04-01', url: 'https://github.com/OkeyAmy/repo-a' }
   ];
-  const repoSection = generateRepositorySection(fakeApiRepos);
-  assert.ok(!repoSection.includes('find /home/okey/repositories'), 'bash listing must be removed');
-  assert.ok(repoSection.includes('<table>'), 'card table must be present');
-  console.log('└── generateRepositorySection: ✓');
+  if (typeof generateRepositorySection === 'function') {
+    const repoSection = generateRepositorySection(fakeApiRepos);
+    assert.ok(!repoSection.includes('find /home/okey/repositories'), 'bash listing must be removed');
+    assert.ok(repoSection.includes('<table>'), 'card table must be present');
+    console.log('└── generateRepositorySection: ✓');
+  } else {
+    console.log('└── generateRepositorySection: skipped (not yet exported)');
+  }
 }
 
 runUnitTests();

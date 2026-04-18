@@ -38,7 +38,7 @@ function computeLanguageStats(repos) {
   for (const r of withLang) {
     counts[r.language] = (counts[r.language] || 0) + 1;
   }
-  const total = repos.length;
+  const total = withLang.length;
   if (total === 0) return [];
   return Object.entries(counts)
     .map(([lang, n]) => [lang, Math.round((n / total) * 100)])
