@@ -209,7 +209,7 @@ ${generateRepositorySection(featured)}
 \`\`\`bash
 $ cat /etc/okey-amy/contact.conf
 
-github  = OkeyAmy
+github  = ${CONFIG.username}
 email   = amaobiokeoma@gmail.com
 twitter = okey_amy
 \`\`\`
