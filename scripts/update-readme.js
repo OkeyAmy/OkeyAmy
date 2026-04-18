@@ -29,69 +29,50 @@ const github = axios.create({
 });
 
 /**
- * Fetch user repositories from GitHub API
+ * Compute language percentages from a repos array
+ * Returns: [ [langName, pct], ... ] sorted desc, top 8
  */
-async function fetchRepositories() {
-  try {
-    console.log('🔄 Fetching repositories...');
-    const response = await github.get(`/users/${CONFIG.username}/repos`, {
-      params: {
-        sort: 'updated',
-        direction: 'desc',
-        per_page: 100
-      }
-    });
-
-    const repos = response.data
-      .filter(repo => !repo.fork && !repo.archived)
-      .slice(0, 6)
-      .map(repo => ({
-        name: repo.name,
-        description: repo.description || 'No description available',
-        stars: repo.stargazers_count,
-        language: repo.language,
-        updated: repo.updated_at.split('T')[0],
-        url: repo.html_url
-      }));
-
-    console.log(`✅ Found ${repos.length} active repositories`);
-    return repos;
-  } catch (error) {
-    console.log('⚠️ Error fetching repositories:', error.message);
-    return [];
+function computeLanguageStats(repos) {
+  const counts = {};
+  const withLang = repos.filter(r => r.language);
+  for (const r of withLang) {
+    counts[r.language] = (counts[r.language] || 0) + 1;
   }
+  const total = repos.length;
+  if (total === 0) return [];
+  return Object.entries(counts)
+    .map(([lang, n]) => [lang, Math.round((n / total) * 100)])
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 8);
 }
 
 /**
- * Fetch user language statistics
+ * Single GitHub API fetch — returns featured repos, language stats, total count
  */
-async function fetchLanguageStats() {
+async function fetchData() {
   try {
-    console.log('🔄 Fetching language statistics...');
+    console.log('🔄 Fetching GitHub data...');
     const response = await github.get(`/users/${CONFIG.username}/repos`, {
-      params: { per_page: 100 }
+      params: { sort: 'updated', direction: 'desc', per_page: 100 }
     });
 
-    const languageStats = {};
-    const repos = response.data.filter(repo => !repo.fork && repo.language);
+    const active = response.data.filter(r => !r.fork && !r.archived);
 
-    for (const repo of repos) {
-      const lang = repo.language;
-      if (lang) {
-        languageStats[lang] = (languageStats[lang] || 0) + 1;
-      }
-    }
+    const featured = active.slice(0, 6).map(repo => ({
+      name: repo.name,
+      description: repo.description || 'No description available',
+      stars: repo.stargazers_count,
+      language: repo.language,
+      updated: repo.updated_at.split('T')[0],
+      url: repo.html_url
+    }));
 
-    // Sort by count and get top languages
-    const sortedLangs = Object.entries(languageStats)
-      .sort(([,a], [,b]) => b - a)
-      .slice(0, 8);
-
-    console.log('✅ Language statistics compiled');
-    return sortedLangs;
+    const languages = computeLanguageStats(active);
+    console.log(`✅ Fetched ${active.length} repos, ${languages.length} languages`);
+    return { featured, languages, totalCount: active.length };
   } catch (error) {
-    console.log('⚠️ Error fetching language stats:', error.message);
-    return [];
+    console.log('⚠️ Error fetching GitHub data:', error.message);
+    return { featured: [], languages: [], totalCount: 0 };
   }
 }
 
@@ -222,10 +203,7 @@ ${frameworkSection}
 async function generateReadme() {
   console.log('🚀 Starting README generation...');
   
-  const [repos, languages] = await Promise.all([
-    fetchRepositories(),
-    fetchLanguageStats()
-  ]);
+  const { featured: repos, languages, totalCount } = await fetchData();
 
   const readmeContent = `# 🖥️ OKEY-AMY OS | Build ${new Date().toISOString().split('T')[0]}-LTS
 
@@ -321,7 +299,7 @@ ${generateRepositorySection(repos)}
 ![Profile Views](https://komarev.com/ghpvc/?username=${CONFIG.username}&style=flat-square&color=brightgreen&label=visitors)
 ![Followers](https://img.shields.io/github/followers/${CONFIG.username}?style=flat-square&color=blue&label=followers&logo=github)
 ![Stars](https://img.shields.io/github/stars/${CONFIG.username}?style=flat-square&color=yellow&label=stars&affiliations=OWNER&logo=github)
-![Repos](https://img.shields.io/badge/repos-${repos.length}-green?style=flat-square)
+![Repos](https://img.shields.io/badge/repos-${totalCount}-green?style=flat-square)
 
 </div>
 
@@ -343,7 +321,7 @@ ${generateRepositorySection(repos)}
     await fs.writeFile(CONFIG.readmePath, readmeContent);
     console.log('✅ README.md updated successfully!');
     console.log(`📄 Generated ${readmeContent.length} characters`);
-    console.log(`📊 Featured ${repos.length} repositories`);
+    console.log(`📊 Featured ${repos.length} repositories (${totalCount} total)`);
   } catch (error) {
     console.error('❌ Error writing README.md:', error.message);
     throw error;
@@ -351,7 +329,7 @@ ${generateRepositorySection(repos)}
 }
 
 // Export for testing
-module.exports = { generateReadme, CONFIG };
+module.exports = { generateReadme, computeLanguageStats, CONFIG };
 
 // Run if called directly
 if (require.main === module) {
