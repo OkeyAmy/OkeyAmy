@@ -159,7 +159,7 @@ async function generateReadme() {
      ╚═════╝ ╚═╝  ╚═╝╚══════╝  ╚═╝        ╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝
 \`\`\`
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer+%7C+Rapid+Prototyper;Code+Alchemist+%7C+Exploring+Rust+Learning+Daily;Full+Stack+Frameworks+with+Python+at+Core;Formulas+%3E+Spelling+%7C+I+love+doing+hard+things)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2500&pause=1000&color=00FF00&center=true&vCenter=true&width=900&lines=Welcome+to+OKEY-AMY+OS;AI%2FML+Engineer;I+Build+Hard+Things;Explorer+of+Many+Things;Full+Stack+with+Python+at+Core;Formulas+%3E+Spelling)](https://git.io/typing-svg)
 
 </div>
 
@@ -176,7 +176,7 @@ OS:      OkeyAmy Linux x86_64
 Build:   ${today}-LTS
 Status:  active (running)
 Repos:   ${totalCount}
-Focus:   AI/ML · Rapid prototyping · Rust
+Focus:   AI/ML · Building hard things · Explorer of many things
 GitHub:  github.com/${CONFIG.username}
 Contact: amaobiokeoma@gmail.com
 \`\`\`
