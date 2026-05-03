@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-05-02-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-05-03-LTS
 
 <div align="center">
 
@@ -25,7 +25,7 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-05-02-LTS
+Build:   2026-05-03-LTS
 Status:  active (running)
 Repos:   44
 Focus:   AI/ML · Building hard things · Explorer of many things
