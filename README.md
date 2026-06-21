@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-06-19-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-06-21-LTS
 
 <div align="center">
 
@@ -25,9 +25,9 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-06-19-LTS
+Build:   2026-06-21-LTS
 Status:  active (running)
-Repos:   48
+Repos:   47
 Focus:   AI/ML · Building hard things · Explorer of many things
 GitHub:  github.com/OkeyAmy
 Contact: amaobiokeoma@gmail.com
@@ -42,10 +42,10 @@ Contact: amaobiokeoma@gmail.com
 $ pacman -Qs | sort -k2 -rn
 # languages — calculated from repo counts
 
-[█████████████░░░░░░░] typescript      64%
+[█████████████░░░░░░░] typescript      65%
 [███░░░░░░░░░░░░░░░░░] python          17%
-[█░░░░░░░░░░░░░░░░░░░] javascript       6%
-[█░░░░░░░░░░░░░░░░░░░] rust             6%
+[█░░░░░░░░░░░░░░░░░░░] rust             7%
+[█░░░░░░░░░░░░░░░░░░░] javascript       4%
 [█░░░░░░░░░░░░░░░░░░░] shell            4%
 [░░░░░░░░░░░░░░░░░░░░] go               2%
 ```
@@ -60,10 +60,10 @@ $ pacman -Qs | sort -k2 -rn
 <table>
   <tr>
     <td><a href="https://github.com/OkeyAmy/DRS"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=DRS&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
-    <td><a href="https://github.com/OkeyAmy/blindfold"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=blindfold&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/blindfold"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=blindfold&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
     <td><a href="https://github.com/OkeyAmy/smoke-alarm"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=smoke-alarm&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
   <tr>
