@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-06-23-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-06-24-LTS
 
 <div align="center">
 
@@ -25,9 +25,9 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-06-23-LTS
+Build:   2026-06-24-LTS
 Status:  active (running)
-Repos:   47
+Repos:   42
 Focus:   AI/ML · Building hard things · Explorer of many things
 GitHub:  github.com/OkeyAmy
 Contact: amaobiokeoma@gmail.com
@@ -42,11 +42,11 @@ Contact: amaobiokeoma@gmail.com
 $ pacman -Qs | sort -k2 -rn
 # languages — calculated from repo counts
 
-[█████████████░░░░░░░] typescript      65%
-[███░░░░░░░░░░░░░░░░░] python          17%
-[█░░░░░░░░░░░░░░░░░░░] rust             7%
-[█░░░░░░░░░░░░░░░░░░░] javascript       4%
-[█░░░░░░░░░░░░░░░░░░░] shell            4%
+[█████████████░░░░░░░] typescript      63%
+[████░░░░░░░░░░░░░░░░] python          20%
+[█░░░░░░░░░░░░░░░░░░░] javascript       5%
+[█░░░░░░░░░░░░░░░░░░░] rust             5%
+[█░░░░░░░░░░░░░░░░░░░] shell            5%
 [░░░░░░░░░░░░░░░░░░░░] go               2%
 ```
 
