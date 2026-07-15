@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-07-14-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-07-15-LTS
 
 <div align="center">
 
@@ -25,7 +25,7 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-07-14-LTS
+Build:   2026-07-15-LTS
 Status:  active (running)
 Repos:   38
 Focus:   AI/ML · Building hard things · Explorer of many things
@@ -60,8 +60,8 @@ $ pacman -Qs | sort -k2 -rn
 
 <table>
   <tr>
-    <td><a href="https://github.com/OkeyAmy/scar-tissue"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=scar-tissue&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
     <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/scar-tissue"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=scar-tissue&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/OkeyAmy/fiberpilot"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=fiberpilot&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
