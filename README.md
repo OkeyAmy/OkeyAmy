@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-09-09-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-09-10-LTS
 
 <div align="center">
 
@@ -25,7 +25,7 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-09-09-LTS
+Build:   2026-09-10-LTS
 Status:  active (running)
 Repos:   37
 Focus:   AI/ML · Building hard things · Explorer of many things
@@ -42,12 +42,12 @@ Contact: amaobiokeoma@gmail.com
 $ pacman -Qs | sort -k2 -rn
 # languages — calculated from repo counts
 
-[█████████░░░░░░░░░░░] typescript      43%
-[█████░░░░░░░░░░░░░░░] python          24%
+[████████░░░░░░░░░░░░] typescript      42%
+[█████░░░░░░░░░░░░░░░] python          25%
 [██░░░░░░░░░░░░░░░░░░] javascript      11%
 [██░░░░░░░░░░░░░░░░░░] rust             8%
-[█░░░░░░░░░░░░░░░░░░░] html             5%
-[█░░░░░░░░░░░░░░░░░░░] shell            5%
+[█░░░░░░░░░░░░░░░░░░░] html             6%
+[█░░░░░░░░░░░░░░░░░░░] shell            6%
 [█░░░░░░░░░░░░░░░░░░░] go               3%
 ```
 
@@ -60,16 +60,16 @@ $ pacman -Qs | sort -k2 -rn
 
 <table>
   <tr>
+    <td><a href="https://github.com/OkeyAmy/volt-intron"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=volt-intron&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
     <td><a href="https://github.com/OkeyAmy/wallpaper"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=wallpaper&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
-  </tr>
-  <tr>
     <td><a href="https://github.com/OkeyAmy/bicameral"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=bicameral&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
-    <td><a href="https://github.com/OkeyAmy/Bs.C-Student-Project"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Bs.C-Student-Project&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
   <tr>
+    <td><a href="https://github.com/OkeyAmy/Bs.C-Student-Project"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Bs.C-Student-Project&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
     <td><a href="https://github.com/OkeyAmy/nullrun"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=nullrun&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
-    <td><a href="https://github.com/OkeyAmy/Clickwright"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Clickwright&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
 </table>
 
