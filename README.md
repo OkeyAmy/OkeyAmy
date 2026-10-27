@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-10-26-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-10-27-LTS
 
 <div align="center">
 
@@ -25,9 +25,9 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-10-26-LTS
+Build:   2026-10-27-LTS
 Status:  active (running)
-Repos:   37
+Repos:   36
 Focus:   AI/ML · Building hard things · Explorer of many things
 GitHub:  github.com/OkeyAmy
 Contact: amaobiokeoma@gmail.com
@@ -42,12 +42,12 @@ Contact: amaobiokeoma@gmail.com
 $ pacman -Qs | sort -k2 -rn
 # languages — calculated from repo counts
 
-[████████░░░░░░░░░░░░] typescript      38%
+[████████░░░░░░░░░░░░] typescript      39%
 [████░░░░░░░░░░░░░░░░] python          22%
-[███░░░░░░░░░░░░░░░░░] javascript      14%
+[██░░░░░░░░░░░░░░░░░░] javascript      11%
 [██░░░░░░░░░░░░░░░░░░] html             8%
 [██░░░░░░░░░░░░░░░░░░] rust             8%
-[█░░░░░░░░░░░░░░░░░░░] go               5%
+[█░░░░░░░░░░░░░░░░░░░] go               6%
 [█░░░░░░░░░░░░░░░░░░░] jupyter notebook   3%
 [█░░░░░░░░░░░░░░░░░░░] solidity         3%
 ```
@@ -66,10 +66,10 @@ $ pacman -Qs | sort -k2 -rn
   </tr>
   <tr>
     <td><a href="https://github.com/OkeyAmy/wallpaper"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=wallpaper&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
-    <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/nullrun"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=nullrun&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/OkeyAmy/nullrun"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=nullrun&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
     <td><a href="https://github.com/OkeyAmy/Ilera"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Ilera&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
 </table>
