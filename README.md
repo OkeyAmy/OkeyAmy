@@ -1,4 +1,4 @@
-# 🖥️ OKEY-AMY OS | Build 2026-10-27-LTS
+# 🖥️ OKEY-AMY OS | Build 2026-10-28-LTS
 
 <div align="center">
 
@@ -25,7 +25,7 @@ $ neofetch --source banner.txt
 okey@amy-os ~
 ──────────────
 OS:      OkeyAmy Linux x86_64
-Build:   2026-10-27-LTS
+Build:   2026-10-28-LTS
 Status:  active (running)
 Repos:   36
 Focus:   AI/ML · Building hard things · Explorer of many things
@@ -66,10 +66,10 @@ $ pacman -Qs | sort -k2 -rn
   </tr>
   <tr>
     <td><a href="https://github.com/OkeyAmy/wallpaper"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=wallpaper&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
-    <td><a href="https://github.com/OkeyAmy/nullrun"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=nullrun&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/OkeyAmy/OkeyAmy"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=OkeyAmy&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
+    <td><a href="https://github.com/OkeyAmy/nullrun"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=nullrun&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
     <td><a href="https://github.com/OkeyAmy/Ilera"><img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=OkeyAmy&repo=Ilera&theme=dark&hide_border=true&bg_color=000000&title_color=00ff00&text_color=c9d1d9&icon_color=00ff00" /></a></td>
   </tr>
 </table>
